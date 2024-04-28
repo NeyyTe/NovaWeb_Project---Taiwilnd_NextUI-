@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { Button } from "@nextui-org/react";
 
@@ -8,15 +7,12 @@ import Header from "../ui/header/Header.jsx";
 import Spotlight from "../ui/spotlight/Spotlight.jsx";
 import Spline from "@splinetool/react-spline";
 import { Buttonn } from "@/components/ui/button";
-import { CardHoverGridEffect } from "../../utils/cardHoverGridEffect";
 import { Avatar, AvatarGroup } from "@nextui-org/react";
 function HeroSection({ children }) {
-  const defaultContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-
   return (
     <>
       <div className=" w-full h-full dark:bg-black  dark:bg-dot-white/[0.2] bg-dot-white/[0.2] ">
+        {/* aaaa */}
         {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_45%,black)]"></div> */}
 
         <Header />
@@ -29,7 +25,7 @@ function HeroSection({ children }) {
           <div className=" h-[80vh]   ">
             <Spline scene="https://prod.spline.design/iv6vLiWEDQbUOuwu/scene.splinecode" />
           </div>
-          {/* content-center grid */}
+
           <div className="  space-y-9 w-7/12 ">
             <h1 className="text-8xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 ">
               Où vos idées deviennent une{" "}
@@ -80,10 +76,6 @@ function HeroSection({ children }) {
             </div>
           </div>
         </section>
-
-        {/* <div className="max-w-7xl mx-auto">
-          <hr className="h-1 bg-gradient-to-r from-purple-700/0 via-fuchsia-700 to-fuchsia-700/0 border-0" />
-        </div> */}
 
         <div>{children}</div>
       </div>

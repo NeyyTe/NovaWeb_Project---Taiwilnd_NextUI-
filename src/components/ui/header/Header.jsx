@@ -19,6 +19,7 @@ import {
 } from "@nextui-org/react";
 import { SearchIcon } from "../../../components/SearchIcon.jsx";
 import {
+  HtmlTag,
   ChevronDown,
   Lock,
   Activity,
@@ -28,6 +29,18 @@ import {
   Scale,
 } from "../../../components/Icons.jsx";
 import { Logo } from "../../Logo.jsx";
+
+const icons = {
+  chevron: <ChevronDown fill="currentColor" size={16} />,
+  scale: <Scale className="text-warning" fill="currentColor" size={30} />,
+  lock: <Lock className="text-success" fill="currentColor" size={30} />,
+  activity: (
+    <Activity className="text-secondary" fill="currentColor" size={30} />
+  ),
+  flash: <Flash className="text-primary" fill="currentColor" size={30} />,
+  server: <Server className="text-success" fill="currentColor" size={30} />,
+  user: <TagUser className="text-danger" fill="currentColor" size={30} />,
+};
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,18 +56,6 @@ export default function Header() {
     "Help & Feedback",
     "Log Out",
   ];
-
-  const icons = {
-    chevron: <ChevronDown fill="currentColor" size={16} />,
-    scale: <Scale className="text-warning" fill="currentColor" size={30} />,
-    lock: <Lock className="text-success" fill="currentColor" size={30} />,
-    activity: (
-      <Activity className="text-secondary" fill="currentColor" size={30} />
-    ),
-    flash: <Flash className="text-primary" fill="currentColor" size={30} />,
-    server: <Server className="text-success" fill="currentColor" size={30} />,
-    user: <TagUser className="text-danger" fill="currentColor" size={30} />,
-  };
 
   return (
     <Navbar className="h-[7vh]" isBordered onMenuOpenChange={setIsMenuOpen}>

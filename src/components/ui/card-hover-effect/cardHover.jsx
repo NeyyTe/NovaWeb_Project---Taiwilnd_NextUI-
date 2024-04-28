@@ -8,7 +8,7 @@ export const HoverEffect = ({ items, className }) => {
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 grid-rows-2 ",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-5 grid-rows-2 ",
         className
       )}
     >
@@ -49,6 +49,7 @@ const Card = ({ item }) => {
     >
       <div className="relative z-50 ">
         <div className="p-4 ">
+          <CardIcons>{item.icons}</CardIcons>
           <CardTitle>{item.title}</CardTitle>
           <CardDescription>{item.description}</CardDescription>
         </div>
@@ -59,10 +60,15 @@ const Card = ({ item }) => {
 
 const CardTitle = ({ children }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4  ")}>
-      {children}
-    </h4>
+    <>
+      <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4  ")}>
+        {children}
+      </h4>
+    </>
   );
+};
+const CardIcons = ({ children }) => {
+  return <div className={cn("  ")}>{children}</div>;
 };
 
 const CardDescription = ({ children }) => {

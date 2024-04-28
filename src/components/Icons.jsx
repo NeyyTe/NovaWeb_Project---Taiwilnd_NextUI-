@@ -1,5 +1,8 @@
 import React from "react";
-export const ChevronDown = ({fill, size, height, width, ...props}) => {
+import groupOfUsers from "../assets/groupOfUsers.svg";
+import supportIcon from "../assets/supportIcon.svg";
+
+export const ChevronDown = ({ fill, size, height, width, ...props }) => {
   return (
     <svg
       fill="none"
@@ -21,54 +24,225 @@ export const ChevronDown = ({fill, size, height, width, ...props}) => {
   );
 };
 
-export const Lock = ({fill, size, height, width, ...props}) => {
-  const color = fill;
-
+export const HtmlTag = ({ fill, size, height, width, ...props }) => {
   return (
     <svg
-      height={size || height || 24}
-      viewBox="0 0 24 24"
-      width={size || width || 24}
+      width="42px"
+      height="42px"
+      viewBox="0 0 32 32"
+      id="OBJECT"
       xmlns="http://www.w3.org/2000/svg"
+      fill="#dd62ed"
+      stroke="#dd62ed"
       {...props}
     >
-      <g transform="translate(3.5 2)">
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <defs>
+          <style>{`.cls-1{fill:#3d0066}`}</style>
+        </defs>
+        <title></title>
+        <rect
+          className="cls-1"
+          height="30"
+          rx="3"
+          ry="3"
+          width="30"
+          x="1"
+          y="1"
+        ></rect>
+        <path d="M31,7V4a3,3,0,0,0-3-3H4A3,3,0,0,0,1,4V7Z"></path>
         <path
-          d="M9.121,6.653V4.5A4.561,4.561,0,0,0,0,4.484V6.653"
-          fill="none"
-          stroke={color}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeMiterlimit="10"
-          strokeWidth={1.5}
-          transform="translate(3.85 0.75)"
-        />
+          className="cls-1"
+          d="M26,5h-.5a1,1,0,0,1,0-2H26a1,1,0,0,1,0,2Z"
+        ></path>
         <path
-          d="M.5,0V2.221"
-          fill="none"
-          stroke={color}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeMiterlimit="10"
-          strokeWidth={1.5}
-          transform="translate(7.91 12.156)"
-        />
+          className="cls-1"
+          d="M22,5h-.5a1,1,0,0,1,0-2H22a1,1,0,0,1,0,2Z"
+        ></path>
+        <path d="M10,24a1,1,0,0,1-.71-.29l-4-4a1,1,0,0,1,0-1.42l4-4a1,1,0,0,1,1.42,1.42L7.41,19l3.3,3.29a1,1,0,0,1,0,1.42A1,1,0,0,1,10,24Z"></path>
+        <path d="M22,24a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42L24.59,19l-3.3-3.29a1,1,0,0,1,1.42-1.42l4,4a1,1,0,0,1,0,1.42l-4,4A1,1,0,0,1,22,24Z"></path>
+        <path d="M14,26a1.25,1.25,0,0,1-.32-.05,1,1,0,0,1-.63-1.27l4-12a1,1,0,1,1,1.9.64l-4,12A1,1,0,0,1,14,26Z"></path>
+      </g>
+    </svg>
+  );
+};
+export const UiuxIcon = ({ fill, size, height, width, ...props }) => {
+  return (
+    <svg
+      width="42px"
+      height="42px"
+      viewBox="0 0 14 14"
+      role="img"
+      focusable="false"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#000000"
+      transform="rotate(45)"
+      {...props}
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        {" "}
+        <g transform="matrix(.3 0 0 .3 -.23126488 -.2)">
+          {" "}
+          <path
+            fill="#ffc107"
+            d="M24.639 4c-8.6 0-18.43 4.954-18.43 18.947C6.209 33.108 13.842 44 25.519 44h.175c4.385-.079 9.105-2.918 9.105-8.959 0-1.157-.431-2.159-.809-3.042-.102-.233-.199-.462-.288-.694-.864-2.175.089-2.971 2.329-4.565 2.537-1.806 6.013-4.278 5.968-10.819C41.999 12.032 37.756 4 24.639 4zm.56 35.2c-2.241 0-4.001-1.76-4.001-3.999 0-2.241 1.76-4.001 4.001-4.001 2.238 0 3.998 1.76 3.998 4.001 0 2.239-1.759 3.999-3.998 3.999z"
+          ></path>{" "}
+          <circle cx="34.5" cy="16.5" r="3.5" fill="#9c27b0"></circle>{" "}
+          <circle cx="25.5" cy="10.5" r="3.5" fill="#2196f3"></circle>{" "}
+          <circle cx="15.5" cy="15.5" r="3.5" fill="#4caf50"></circle>{" "}
+          <circle cx="14.5" cy="26.5" r="3.5" fill="#ff3d00"></circle>{" "}
+        </g>{" "}
+      </g>
+    </svg>
+  );
+};
+export const Performance = ({ fill, size, height, width, ...props }) => {
+  return (
+    <svg
+      width="42px"
+      height="42px"
+      viewBox="0 0 100 100"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#000000"
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="rounL"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
         <path
-          d="M7.66,0C1.915,0,0,1.568,0,6.271s1.915,6.272,7.66,6.272,7.661-1.568,7.661-6.272S13.4,0,7.66,0Z"
-          fill="none"
-          stroke={color}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeMiterlimit="10"
-          strokeWidth={1.5}
-          transform="translate(0.75 6.824)"
-        />
+          fill="#EDEDED"
+          d="M50 0c-27.614 0-50 22.385-50 49.999 0 27.615 22.386 50.001 50 50.001s50-22.386 50-50.001c0-27.614-22.386-49.999-50-49.999z"
+        ></path>
+        <path
+          fill="#D5D5D5"
+          d="M78.559 27.014l1.427 1.428-37.697 33.551-4.283-4.283 40.553-30.696z"
+        ></path>
+        <path
+          fill="#BEBEBE"
+          d="M61 76.999v6h-6v-6h-2v6h-6v-6h-2v6h-6v-6h-2v8h26v-8h-2z"
+        ></path>
+        <path
+          fill="#EFC75E"
+          d="M47.031 8.094c-15.203 1.044-28.29 10.351-34.742 23.434l5.424 2.656c5.767-11.646 17.669-19.813 31.333-20.166.32-.008.636 0 .954 0v-6.014c-.983 0-1.971.021-2.969.09z"
+        ></path>
+        <path
+          fill="#E2574C"
+          d="M85.985 49.988c0 5.471-1.437 10.873-3.686 15.61-.689 1.452-.172 3.182 1.235 3.976l.054.03c1.564.882 3.537.234 4.305-1.381 2.63-5.533 4.107-11.843 4.107-18.235 0-7.042-1.743-13.672-4.807-19.5l-5.326 2.794c2.624 4.993 4.118 10.674 4.118 16.706z"
+        ></path>
+        <path
+          fill="#3DB39E"
+          d="M16.407 69.613l.054-.029c1.408-.775 1.924-2.467 1.234-3.887-2.439-5.021-3.886-11.12-3.658-17.104.209-5.493 1.686-10.681 4.13-15.293l-5.356-2.81c-2.57 4.867-4.211 10.29-4.674 16.029-.619 7.668.863 15.368 3.965 21.744.767 1.578 2.74 2.213 4.305 1.35z"
+        ></path>
+        <path
+          fill="#F4B459"
+          d="M50 8.004v6.014c14.174.001 26.436 8.185 32.301 20.095l5.392-2.652c-6.847-13.899-21.151-23.454-37.693-23.457z"
+        ></path>
+        <path
+          fill="#324D5B"
+          d="M76.559 22.014l1.427 1.428-35.697 38.551-4.283-4.283 38.553-35.696z"
+        ></path>
+        <path
+          fill="#1E2D36"
+          d="M50 44.999c-2.762 0-5 2.238-5 5s2.238 5 5 5 5-2.238 5-5-2.238-5-5-5z"
+        ></path>
       </g>
     </svg>
   );
 };
 
-export const Activity = ({fill, size, height, width, ...props}) => {
+export const Lock = ({ fill, size, height, width, ...props }) => {
+  return (
+    <svg
+      width="42px"
+      height="42px"
+      version="1.0"
+      id="Layer_1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 64 64"
+      enableBackground="new 0 0 64 64"
+      xmlSpace="preserve"
+      fill="#000000"
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        {" "}
+        <g>
+          {" "}
+          <path
+            fill="#ff0000"
+            d="M20,14c0-6.627,5.373-12,12-12s12,5.373,12,12v10h-4V14c0-4.418-3.582-8-8-8s-8,3.582-8,8v10h-4V14z"
+          ></path>{" "}
+          <g>
+            {" "}
+            <path
+              fill="#F9EBB2"
+              d="M10,60c0,1.104,0.896,2,2,2h40c1.104,0,2-0.896,2-2v-4H10V60z"
+            ></path>{" "}
+            <rect x="10" y="34" fill="#F9EBB2" width="44" height="20"></rect>{" "}
+            <path
+              fill="#F9EBB2"
+              d="M52,26H12c-1.104,0-2,0.895-2,2v4h44v-4C54,26.895,53.104,26,52,26z"
+            ></path>{" "}
+          </g>{" "}
+          <g>
+            {" "}
+            <path
+              fill="#000000"
+              d="M52,24h-6V14c0-7.732-6.268-14-14-14S18,6.268,18,14v10h-6c-2.211,0-4,1.789-4,4v32c0,2.211,1.789,4,4,4 h40c2.211,0,4-1.789,4-4V28C56,25.789,54.211,24,52,24z M20,14c0-6.627,5.373-12,12-12s12,5.373,12,12v10h-4V14 c0-4.418-3.582-8-8-8s-8,3.582-8,8v10h-4V14z M38,14v10H26V14c0-3.314,2.687-6,6-6S38,10.686,38,14z M54,60c0,1.104-0.896,2-2,2 H12c-1.104,0-2-0.896-2-2v-4h44V60z M54,54H10V34h44V54z M54,32H10v-4c0-1.105,0.896-2,2-2h40c1.104,0,2,0.895,2,2V32z"
+            ></path>{" "}
+            <path
+              fill="#000000"
+              d="M29,44.979V49c0,1.656,1.343,3,3,3s3-1.344,3-3v-4.021c1.209-0.912,2-2.348,2-3.979c0-2.762-2.238-5-5-5 s-5,2.238-5,5C27,42.631,27.791,44.066,29,44.979z M32,38c1.657,0,3,1.342,3,3c0,1.305-0.837,2.402-2,2.816V49 c0,0.553-0.447,1-1,1s-1-0.447-1-1v-5.184c-1.163-0.414-2-1.512-2-2.816C29,39.342,30.343,38,32,38z"
+            ></path>{" "}
+          </g>{" "}
+          <path
+            fill="#ff0000"
+            d="M32,38c1.657,0,3,1.342,3,3c0,1.305-0.837,2.402-2,2.816V49c0,0.553-0.447,1-1,1s-1-0.447-1-1v-5.184 c-1.163-0.414-2-1.512-2-2.816C29,39.342,30.343,38,32,38z"
+          ></path>{" "}
+          <g opacity="0.15">
+            {" "}
+            <path d="M10,60c0,1.104,0.896,2,2,2h40c1.104,0,2-0.896,2-2v-4H10V60z"></path>{" "}
+            <path d="M52,26H12c-1.104,0-2,0.895-2,2v4h44v-4C54,26.895,53.104,26,52,26z"></path>{" "}
+          </g>{" "}
+        </g>{" "}
+      </g>
+    </svg>
+  );
+};
+export const GroupOfUsers = ({ fill, size, height, width, ...props }) => {
+  return <img {...props} src={groupOfUsers} alt="" />;
+};
+export const SupportIcon = ({ fill, size, height, width, ...props }) => {
+  return (
+    // width="42px"
+    // height="42px"
+    <img src={supportIcon} alt="" />
+  );
+};
+
+export const Activity = ({ fill, size, height, width, ...props }) => {
   return (
     <svg
       height={size || height || 24}
@@ -182,7 +356,6 @@ export const TagUser = ({
     </svg>
   );
 };
-
 
 export const Scale = ({
   fill = "currentColor",
