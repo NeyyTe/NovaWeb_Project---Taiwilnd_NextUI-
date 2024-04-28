@@ -1,18 +1,14 @@
-import { Accordion, AccordionItem } from "@nextui-org/react";
 import { Button } from "@nextui-org/react";
-
 import Header from "../ui/header/Header.jsx";
-// import TypewriterEffectSmoothDemo from "./utils/TypewriterEffectTest.jsx";
-
 import Spotlight from "../ui/spotlight/Spotlight.jsx";
 import Spline from "@splinetool/react-spline";
-import { Buttonn } from "@/components/ui/button";
+
+// import TypewriterEffectSmoothDemo from "./utils/TypewriterEffectTest.jsx";
 import { Avatar, AvatarGroup } from "@nextui-org/react";
 function HeroSection({ children }) {
   return (
     <>
       <div className=" w-full h-full dark:bg-black  dark:bg-dot-white/[0.2] bg-dot-white/[0.2] ">
-        {/* aaaa */}
         {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_45%,black)]"></div> */}
 
         <Header />

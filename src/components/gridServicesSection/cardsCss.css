@@ -1,0 +1,18 @@
+.whyus {
+  /* background-image: url(../../assets/bbblurry1.svg);
+  background-position: center;
+  background-size: cover; */
+  display: grid;
+  place-items: start;
+}
+
+.whyus > * {
+  grid-column: 1/1;
+  grid-row: 1/1;
+}
+
+.whyus .pourquoi {
+  z-index: 5;
+
+  /* box-shadow: 0px 0px 10px 1px rgb(221, 98, 237); */
+}
