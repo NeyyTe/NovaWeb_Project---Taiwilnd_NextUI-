@@ -8,7 +8,7 @@ import { Avatar, AvatarGroup } from "@nextui-org/react";
 function HeroSection({ children }) {
   return (
     <>
-      <div className=" w-full h-full dark:bg-black  dark:bg-dot-white/[0.2] bg-dot-white/[0.2] ">
+      <div className=" w-full h-full dark:bg-black  dark:bg-dot-white/[0.2] bg-dot-white/[0.2] -z-20">
         {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_45%,black)]"></div> */}
 
         <Header />

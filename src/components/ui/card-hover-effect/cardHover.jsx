@@ -1,41 +1,47 @@
 import { useState } from "react";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
-
+import bbblurry1 from "../../../assets/bbblurry1.svg";
 export const HoverEffect = ({ items, className }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div
-      className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-5  ",
-        className
-      )}
-    >
-      {items.map((item, idx) => (
-        <div
-          key={item.link}
-          className="relative group block p-2 h-full w-full"
-          onMouseEnter={() => setHoveredIndex(idx)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
-          <AnimatePresence>
-            {hoveredIndex === idx && (
-              <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 bg-primary/[0.8] block rounded-3xl"
-                layoutId="hoverBackground"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: { duration: 0.15 } }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
-                }}
-              />
-            )}
-          </AnimatePresence>
-          <Card item={item} />
-        </div>
-      ))}
+    <div className="relative z-[1]">
+      <img
+        src={bbblurry1}
+        alt="Image blurry orbs"
+        className="blurrybg absolute -z-[1] -top-20"
+      />
+      <div
+        className={cn(
+          "container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-5 "
+        )}
+      >
+        {items.map((item, idx) => (
+          <div
+            key={item.link}
+            className="relative group block p-2 h-full w-full"
+            onMouseEnter={() => setHoveredIndex(idx)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <AnimatePresence>
+              {hoveredIndex === idx && (
+                <motion.span
+                  className="absolute inset-0 h-full w-full bg-neutral-200 bg-primary/[0.8] block rounded-3xl"
+                  layoutId="hoverBackground"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1, transition: { duration: 0.15 } }}
+                  exit={{
+                    opacity: 0,
+                    transition: { duration: 0.15, delay: 0.2 },
+                  }}
+                />
+              )}
+            </AnimatePresence>
+            <Card item={item} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

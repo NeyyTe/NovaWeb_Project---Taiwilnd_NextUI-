@@ -12,7 +12,6 @@ import {
   SupportIcon,
 } from "@/components/Icons";
 
-import "./cardsCss.css";
 export default function CardHoverGridEffect() {
   const projects = [
     {
@@ -61,18 +60,17 @@ export default function CardHoverGridEffect() {
 
   return (
     <>
-      <div className="container mx-auto px-8  ">
-        <h1 className="p-2 text-4xl">Nos Services</h1>
-
+      <div className="  ">
+        <div className="container mx-auto">
+          <h1 className="p-2 text-4xl ">Nos Services</h1>
+        </div>
         <HoverEffect items={projects} />
       </div>
-
-      <div className=" whyus   mt-12  ">
-        <img src={bbblurry1} alt="Image oscillante" className="" />
-
-        <div className=" pourquoi container mx-auto rounded  bg-gray-800/50 p-8 ">
+      <hr className=" max-w-3xl mx-auto bg-gradient-to-r from-purple-500/10 via-fuchsia-500 to-violet-800/10 h-1 border-none rounded my-8" />
+      <div className="  relative  pt-7 z-[1]">
+        <div className=" container mx-auto rounded  bg-gray-800/50 p-8 ">
           <div className="flex ">
-            <h2 className="text-3xl font-bold mb-4  pr-8 basis-1/4">
+            <h2 className="text-3xl font-bold mb-4  pr-8 basis-1/4 ">
               Pourquoi nous choisir
             </h2>
             <div className="text-lg basis-3/4 space-y-4">
