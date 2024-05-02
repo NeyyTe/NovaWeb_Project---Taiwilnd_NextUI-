@@ -58,12 +58,12 @@ export default function Header() {
   ];
 
   return (
-    <Navbar className="h-[7vh]" isBordered onMenuOpenChange={setIsMenuOpen}>
+    <Navbar className="h-[7vh] " isBordered onMenuOpenChange={setIsMenuOpen}>
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Fermer menu" : "Ouvrir menu"}
         className="sm:hidden"
       />
-      <NavbarContent justify="start">
+      <NavbarContent justify="start" className="">
         <NavbarBrand className="mr-4">
           <div className="hidden sm:block">
             <Logo />

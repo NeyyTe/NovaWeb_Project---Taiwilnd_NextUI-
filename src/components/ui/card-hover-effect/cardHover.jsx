@@ -2,6 +2,7 @@ import { useState } from "react";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import bbblurry1 from "../../../assets/bbblurry1.svg";
+
 export const HoverEffect = ({ items, className }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -10,7 +11,7 @@ export const HoverEffect = ({ items, className }) => {
       <img
         src={bbblurry1}
         alt="Image blurry orbs"
-        className="blurrybg absolute -z-[1] -top-20"
+        className="blurrybg absolute -z-[1] -top-32 "
       />
       <div
         className={cn(
@@ -81,7 +82,7 @@ const CardDescription = ({ children }) => {
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-300 tracking-wide leading-relaxed  text-sm "
+        "mt-8 text-gray-300 tracking-wide leading-relaxed  text-sm "
       )}
     >
       {children}

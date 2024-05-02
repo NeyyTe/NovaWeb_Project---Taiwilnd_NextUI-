@@ -73,7 +73,7 @@ function HeroSection({ children }) {
           </div>
         </section>
 
-        <div>{children}</div>
+        <div className="">{children}</div>
       </div>
     </>
   );
