@@ -4,6 +4,8 @@ import GridServicesSection from "@/components/gridServicesSection/GridServicesSe
 import PouquoiNousSection from "@/components/pourquoiNousSection/PouquoiNousSection";
 import TestimonialsSection from "@/components/testimonialsSection/TestimonialsSection";
 import MeetOurTeam from "@/components/meetOurTeam/MeetOurTeam";
+import ContactSection from "@/components/contactSection/ContactSection";
+
 function LandingPage() {
   return (
     <>
@@ -13,6 +15,7 @@ function LandingPage() {
         <TestimonialsSection>
           <MeetOurTeam />
         </TestimonialsSection>
+        <ContactSection />
       </HeroSection>
     </>
   );

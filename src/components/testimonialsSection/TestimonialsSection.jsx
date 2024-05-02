@@ -27,7 +27,7 @@ function TestimonialsSection({ children }) {
                 Un grand merci à toute l'équipe pour leur professionnalisme et
                 leur dévouement{" "}
               </p>
-              <div className="pt-8 space-y-2">
+              <div className="pt-8 ">
                 <p className="text-xl"> Sophie</p>
                 <p className="text-[#efedfd99]">CEO de XYZ Company</p>
               </div>
