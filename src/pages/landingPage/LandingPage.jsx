@@ -5,6 +5,7 @@ import PouquoiNousSection from "@/components/pourquoiNousSection/PouquoiNousSect
 import TestimonialsSection from "@/components/testimonialsSection/TestimonialsSection";
 import MeetOurTeam from "@/components/meetOurTeam/MeetOurTeam";
 import ContactSection from "@/components/contactSection/ContactSection";
+import Footer from "@/components/footer/Footer";
 
 function LandingPage() {
   return (
@@ -16,6 +17,7 @@ function LandingPage() {
           <MeetOurTeam />
         </TestimonialsSection>
         <ContactSection />
+        <Footer />
       </HeroSection>
     </>
   );

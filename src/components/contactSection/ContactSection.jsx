@@ -16,10 +16,10 @@ function ContactSection() {
             </p>
             <div className="flex">
               <Button
-                className="text-lg mx-auto tracking-wide content-center"
+                className="text-lg mx-auto tracking-wide bg-white text-black"
                 color="secondary"
               >
-                <b>Contactez</b>
+                <b>Nous contacter </b>
               </Button>
             </div>
           </div>
