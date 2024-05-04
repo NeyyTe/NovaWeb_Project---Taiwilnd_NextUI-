@@ -196,7 +196,7 @@ function Footer() {
                     name="email"
                     id="email"
                     placeholder="Entrer votre email"
-                    className="block w-full p-2 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                    className="block w-full p-2 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:outline-primary caret-blue-600 "
                   />
                 </div>
 
@@ -210,7 +210,7 @@ function Footer() {
               </form>
             </div>
           </div>
-          <hr className="mt-16 mb-10 border-gray-200" />
+          <hr className="mt-16 mb-10 border-gray-600" />
           <p className="text-sm text-center text-gray-300">
             © Copyright 2024, Tout droits réservé par Maréchal Maxence
           </p>

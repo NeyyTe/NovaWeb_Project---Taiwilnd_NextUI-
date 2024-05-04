@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*! Poppins fonts */
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("./components/fonts/poppins/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("./components/fonts/poppins/Poppins-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("./components/fonts/poppins/Poppins-Bold.ttf") format("truetype");
+}
+
+/*! Supreme fonts */
+@font-face {
+  font-family: "Supreme-Medium";
+  src: url("./components/fonts/supreme/Supreme-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Supreme-Regular";
+  src: url("./components/fonts/supreme/Supreme-Regular.woff2") format("woff2");
+}

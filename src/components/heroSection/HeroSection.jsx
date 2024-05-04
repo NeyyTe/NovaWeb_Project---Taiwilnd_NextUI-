@@ -22,14 +22,14 @@ function HeroSection({ children }) {
             <Spline scene="https://prod.spline.design/iv6vLiWEDQbUOuwu/scene.splinecode" />
           </div>
 
-          <div className="  space-y-9 w-7/12 ">
-            <h1 className="text-8xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 ">
+          <div className="  space-y-8 w-8/12 ">
+            <h1 className="text-8xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 font-poppinsReg ">
               Où vos idées deviennent une{" "}
               <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-fuchsia-700 inline-block text-transparent bg-clip-text">
                 réalité
               </span>
             </h1>
-            <p>
+            <p className="font-supremeReg  text-lg tracking-wide">
               Nous sommes une équipe passionnée de designers et de développeurs
               web, dédiée à créer{" "}
               <b className="text-foreground">
@@ -38,7 +38,7 @@ function HeroSection({ children }) {
               pour nos clients.
             </p>
 
-            <Button className="text-lg tracking-wide" color="primary">
+            <Button className="text-lg tracking-wide " color="primary">
               <b>Acheter </b>
             </Button>
 

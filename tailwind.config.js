@@ -17,6 +17,14 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppinsReg: ["Poppins-Regular"],
+        poppinsMed: ["Poppins-Medium"],
+        poppinsBold: ["Poppins-Bold"],
+
+        supremeReg: ["Supreme-Regular"],
+        supremeMed: ["Supreme-Medium"],
+      },
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
         aurora: "aurora 60s linear infinite",
