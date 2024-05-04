@@ -9,6 +9,7 @@ import {
   Lock,
   GroupOfUsers,
   SupportIcon,
+  Underline,
 } from "@/components/Icons";
 
 export default function CardHoverGridEffect() {
@@ -59,11 +60,22 @@ export default function CardHoverGridEffect() {
 
   return (
     <>
-      <div className="  ">
+      <div>
         <div className="container mx-auto">
-          <h1 className="p-2 text-4xl ">Nos Services</h1>
+          <h1 className="p-2 text-4xl relative">
+            Nos Services
+            <Underline
+              fill="#dd62ed"
+              size={200}
+              width="100%"
+              className="absolute top-[55px] left-0"
+            />
+          </h1>
         </div>
-        <HoverEffect items={projects} />
+
+        <div className="mt-4">
+          <HoverEffect items={projects} />
+        </div>
       </div>
 
       <hr className=" max-w-3xl mx-auto bg-gradient-to-r from-purple-500/10 via-fuchsia-500 to-violet-800/10 h-1 border-none rounded my-8" />

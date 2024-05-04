@@ -1,4 +1,5 @@
 import React from "react";
+import { Underline } from "../Icons";
 
 function PouquoiNousSection() {
   return (
@@ -6,8 +7,14 @@ function PouquoiNousSection() {
       <div className="  relative  pt-7 z-[1]">
         <div className=" container mx-auto rounded  bg-gray-800/50 p-8 ">
           <div className="flex ">
-            <h2 className="text-3xl font-bold mb-4  pr-8 basis-1/4 ">
+            <h2 className="text-3xl font-bold mb-4  pr-8 basis-1/4 relative">
               Pourquoi nous choisir
+              <Underline
+                fill="#dd62ed"
+                size={1150}
+                width="100%"
+                className="absolute top-[50px] left-0"
+              />
             </h2>
             <div className="text-lg basis-3/4 space-y-4">
               <p>

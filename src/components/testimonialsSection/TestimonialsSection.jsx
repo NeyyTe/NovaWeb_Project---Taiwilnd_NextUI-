@@ -1,6 +1,6 @@
 import teamWorking from "../../assets/teamWorking.jpg";
 import oooscillate from "../../assets/oooscillate.svg";
-
+import { Underline } from "../Icons";
 function TestimonialsSection({ children }) {
   return (
     <>
@@ -16,7 +16,16 @@ function TestimonialsSection({ children }) {
           </div>
 
           <div className="">
-            <h2 className="text-4xl ">Témoignages</h2>
+            <h2 className="text-4xl relative">
+              Témoignages
+              <Underline
+                fill="#dd62ed"
+                size={450}
+                width="100%"
+                className="absolute top-[50px] left-0"
+              />
+            </h2>
+
             <div className="space-y-6 mt-[52px] *:leading-snug">
               <p className="text-4xl">
                 " NovaWeb a transformé notre présence en ligne. Leur équipe

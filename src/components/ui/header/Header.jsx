@@ -19,7 +19,6 @@ import {
 } from "@nextui-org/react";
 import { SearchIcon } from "../../../components/SearchIcon.jsx";
 import {
-  HtmlTag,
   ChevronDown,
   Lock,
   Activity,

@@ -1,4 +1,6 @@
 import React from "react";
+
+//Avatars
 import Avatar1 from "../../assets/Avatars/Avatar 1.svg";
 import Avatar2 from "../../assets/Avatars/Avatar 2.svg";
 import Avatar3 from "../../assets/Avatars/Avatar 3.svg";
@@ -6,14 +8,23 @@ import Avatar4 from "../../assets/Avatars/Avatar 4.svg";
 import Avatar5 from "../../assets/Avatars/Avatar 5.svg";
 import Avatar6 from "../../assets/Avatars/Avatar 6.svg";
 
-import { Image } from "@nextui-org/react";
+import { Underline } from "../Icons";
+
 import "./meetOurTeam.css";
 export default function MeetOurTeam() {
   return (
     <>
       <div className=" container mx-auto   flex mt-24  ">
         <div className="">
-          <h1 className="text-4xl basis 1/4">Rencontrez notre équipe</h1>
+          <h1 className="text-4xl basis 1/4 relative">
+            Rencontrez notre équipe
+            {/* <Underline
+              fill="#dd62ed"
+              size={450}
+              width="100%"
+              className="absolute top-[50px] left-0"
+            /> */}
+          </h1>
         </div>
 
         <div className="team basis-3/4 *:space-y-2 p-2">
