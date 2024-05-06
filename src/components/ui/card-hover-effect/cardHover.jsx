@@ -82,7 +82,7 @@ const CardDescription = ({ children }) => {
   return (
     <p
       className={cn(
-        "mt-8 text-gray-300 tracking-wide leading-relaxed  text-sm "
+        "mt-6 text-gray-300 tracking-wide leading-relaxed  text-sm "
       )}
     >
       {children}

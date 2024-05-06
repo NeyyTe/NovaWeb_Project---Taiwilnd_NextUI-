@@ -172,7 +172,9 @@ export default function Header() {
               <p className="font-semibold">Connecté à </p>
               <p className="font-semibold">zoey@gmail.com</p>
             </DropdownItem>
-            <DropdownItem key="settings">Mes paramètres</DropdownItem>
+            <DropdownItem href="/profil" key="settings">
+              Mes paramètres
+            </DropdownItem>
             <DropdownItem key="team_settings">Paramètres d'équipe</DropdownItem>
             <DropdownItem key="analytics">Analyses</DropdownItem>
             <DropdownItem key="system">Systeme</DropdownItem>

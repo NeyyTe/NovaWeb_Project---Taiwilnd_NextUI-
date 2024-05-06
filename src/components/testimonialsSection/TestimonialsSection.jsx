@@ -20,7 +20,7 @@ function TestimonialsSection({ children }) {
               Témoignages
               <Underline
                 fill="#dd62ed"
-                size={450}
+                size={530}
                 width="100%"
                 className="absolute top-[50px] left-0"
               />

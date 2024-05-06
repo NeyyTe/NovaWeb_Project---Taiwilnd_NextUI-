@@ -26,3 +26,15 @@
   font-family: "Supreme-Regular";
   src: url("./components/fonts/supreme/Supreme-Regular.woff2") format("woff2");
 }
+
+h1,
+h2 {
+  font-family: "Poppins-Medium";
+}
+h4 {
+  font-family: "Poppins-Regular";
+}
+
+p {
+  font-family: "Supreme-Medium";
+}

@@ -16,7 +16,7 @@ export default function MeetOurTeam() {
     <>
       <div className=" container mx-auto   flex mt-24  ">
         <div className="">
-          <h1 className="text-4xl basis 1/4 relative">
+          <h2 className="text-4xl basis 1/4 relative">
             Rencontrez notre équipe
             {/* <Underline
               fill="#dd62ed"
@@ -24,7 +24,7 @@ export default function MeetOurTeam() {
               width="100%"
               className="absolute top-[50px] left-0"
             /> */}
-          </h1>
+          </h2>
         </div>
 
         <div className="team basis-3/4 *:space-y-2 p-2">

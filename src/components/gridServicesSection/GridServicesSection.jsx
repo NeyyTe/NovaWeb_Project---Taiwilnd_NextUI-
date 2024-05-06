@@ -62,15 +62,15 @@ export default function CardHoverGridEffect() {
     <>
       <div>
         <div className="container mx-auto">
-          <h1 className="p-2 text-4xl relative">
+          <h2 className="p-2 text-4xl relative">
             Nos Services
             <Underline
               fill="#dd62ed"
-              size={200}
+              size={230}
               width="100%"
               className="absolute top-[55px] left-0"
             />
-          </h1>
+          </h2>
         </div>
 
         <div className="mt-4">

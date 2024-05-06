@@ -23,7 +23,7 @@ function HeroSection({ children }) {
           </div>
 
           <div className="  space-y-8 w-8/12 ">
-            <h1 className="text-8xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 font-poppinsReg ">
+            <h1 className="text-8xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 ">
               Où vos idées deviennent une{" "}
               <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-fuchsia-700 inline-block text-transparent bg-clip-text">
                 réalité
