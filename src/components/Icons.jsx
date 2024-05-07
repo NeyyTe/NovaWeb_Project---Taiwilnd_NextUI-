@@ -236,11 +236,7 @@ export const GroupOfUsers = ({ fill, size, height, width, ...props }) => {
 };
 
 export const SupportIcon = ({ fill, size, height, width, ...props }) => {
-  return (
-    // width="42px"
-    // height="42px"
-    <img src={supportIcon} alt="" />
-  );
+  return <img src={supportIcon} alt="" />;
 };
 
 export const Swirl = ({ fill, size, height, width, ...props }) => {
