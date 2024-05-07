@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { Divider } from "@nextui-org/divider";
+import { Avatar, AvatarGroup, AvatarIcon } from "@nextui-org/avatar";
+
 function ProfilsPage() {
   const profiles = [
     "Mes paramètres",
@@ -13,7 +15,20 @@ function ProfilsPage() {
   return (
     <>
       <div className="flex  ">
-        <div className=" flex flex-col  bg-primary-50/70  *:text-xl w-1/5 justify-between p-8 py-12">
+        <div className=" flex flex-col  bg-primary-50/70  *:text-xl w-1/5  p-8 py-12">
+          <div className="flex gap-8">
+            <Avatar
+              color="danger"
+              isBordered
+              className="w-20 h-20 mb-12"
+              src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
+            />
+            <div>
+              <p>Zoey</p>
+              <p className="text-gray-400">zoey@gmail.com</p>
+            </div>
+          </div>
+
           <div className="flex flex-col  justify-items-center  ">
             {profiles.map((profile) => (
               <NavLink
@@ -28,7 +43,7 @@ function ProfilsPage() {
               </NavLink>
             ))}
           </div>
-          <div>
+          <div className=" flex items-end">
             {" "}
             <NavLink to="/">Retour à l'accueil</NavLink>
           </div>

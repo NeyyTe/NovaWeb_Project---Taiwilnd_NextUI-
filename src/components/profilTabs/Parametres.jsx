@@ -12,7 +12,7 @@ export default function Parametres() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true);
 
   return (
-    <div className="max-w-lg mt-8 px-4 m-8 ">
+    <div className="max-w-lg mt-10 px-4 m-8 ">
       <h1 className="text-3xl font-bold ">Paramètres du Profil</h1>{" "}
       <Divider className="bg-gradient-to-r from-purple-500/10 via-fuchsia-500 to-violet-800/10 my-8" />
       {/* <hr className="bg-gradient-to-r from-purple-500/10 via-fuchsia-500 to-violet-800/10 h-1 border-none rounded my-8" /> */}
