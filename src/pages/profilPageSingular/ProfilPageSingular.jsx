@@ -1,5 +1,5 @@
 import Parametres from "@/components/profilTabs/Parametres";
-import React from "react";
+import ServicesHistory from "../profilsPage/ServicesHistory";
 import { useParams } from "react-router-dom";
 
 function ProfilPageSingular() {
@@ -9,11 +9,11 @@ function ProfilPageSingular() {
   // Définit le contenu de chaque onglet
   let content;
   switch (id) {
-    case "Mes paramètres":
+    case "Paramètres":
       content = <Parametres />;
       break;
-    case "Moyens de paiement":
-      content = <Parametres />;
+    case "Services historique":
+      content = <ServicesHistory />;
       break;
     case "Analyses":
       content = <Parametres />;

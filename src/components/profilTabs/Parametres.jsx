@@ -7,13 +7,22 @@ import { Avatar } from "@nextui-org/react";
 import { Input } from "@nextui-org/input";
 import { RadioGroup, Radio } from "@nextui-org/radio";
 import { Divider } from "@nextui-org/divider";
+import { CalendarDate, parseDate } from "@internationalized/date";
+import { DateInput } from "@nextui-org/react";
+
+import {
+  EyeSlashFilledIcon,
+  EyeFilledIcon,
+} from "../password/EyeSlashFilledIcon.jsx";
 
 export default function Parametres() {
-  const [notificationsEnabled, setNotificationsEnabled] = useState(true);
+  const [isVisible, setIsVisible] = React.useState(false);
+
+  const toggleVisibility = () => setIsVisible(!isVisible);
 
   return (
     <div className="max-w-lg mt-10 px-4 m-8 ">
-      <h1 className="text-3xl font-bold ">Paramètres du Profil</h1>{" "}
+      <h1 className="text-3xl font-bold tracking-wide">Paramètres du Profil</h1>{" "}
       <Divider className="bg-gradient-to-r from-purple-500/10 via-fuchsia-500 to-violet-800/10 my-8" />
       {/* <hr className="bg-gradient-to-r from-purple-500/10 via-fuchsia-500 to-violet-800/10 h-1 border-none rounded my-8" /> */}
       <div className="space-y-4 bg-primary-50/70  p-8 rounded">
@@ -22,6 +31,7 @@ export default function Parametres() {
           <Input type="text" label="Nom" placeholder="Zoey" />
           <Input type="text" label="Prénom" placeholder="Doe" />
         </div>
+
         <div>
           {" "}
           <Input
@@ -35,7 +45,27 @@ export default function Parametres() {
             // }
           />
         </div>
-
+        <div className="">
+          <Input
+            label="Password"
+            placeholder="Changer votre mot de passe"
+            endContent={
+              <button
+                className="focus:outline-none"
+                type="button"
+                onClick={toggleVisibility}
+              >
+                {isVisible ? (
+                  <EyeSlashFilledIcon className="text-2xl text-default-400 pointer-events-none" />
+                ) : (
+                  <EyeFilledIcon className="text-2xl text-default-400 pointer-events-none" />
+                )}
+              </button>
+            }
+            type={isVisible ? "text" : "password"}
+            className=""
+          />
+        </div>
         <div className=" ">
           <Select
             label="Langue"
@@ -151,6 +181,16 @@ export default function Parametres() {
               Mexico
             </SelectItem>
           </Select>
+        </div>
+
+        <div>
+          {" "}
+          <DateInput
+            label={"Date de naissance"}
+            isReadOnly
+            defaultValue={parseDate("1990-04-12")}
+            placeholderValue={new CalendarDate(1995, 11, 6)}
+          />
         </div>
       </div>
       {/* <Divider className="bg-gradient-to-r from-purple-500/10 via-fuchsia-500 to-violet-800/10 my-8" /> */}

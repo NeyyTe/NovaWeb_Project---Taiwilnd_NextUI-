@@ -5,8 +5,8 @@ import { Avatar, AvatarGroup, AvatarIcon } from "@nextui-org/avatar";
 
 function ProfilsPage() {
   const profiles = [
-    "Mes paramètres",
-    "Moyens de paiement",
+    "Paramètres",
+    "Services historique",
     "Analyses",
     "Systeme",
     "Configurations",
@@ -20,7 +20,8 @@ function ProfilsPage() {
             <Avatar
               color="danger"
               isBordered
-              className="w-20 h-20 mb-12"
+              size="lg"
+              className=" mb-12"
               src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
             />
             <div>
