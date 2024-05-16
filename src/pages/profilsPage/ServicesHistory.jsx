@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenuTrigger,
@@ -17,101 +18,96 @@ import {
   Table,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { useState, useEffect } from "react";
 
-const sortOptions = [
-  { value: "date", label: "Date" },
-  { value: "number", label: "Numéro de commande" },
-  { value: "status", label: "Statut" },
+const initialData = [
+  {
+    id: 1,
+    commande: "#12345",
+    date: "Mai 15, 2023",
+    total: "€99.99",
+    statut: "Livré",
+  },
+  {
+    id: 2,
+    commande: "#12344",
+    date: "Mai 10, 2023",
+    total: "€49.99",
+    statut: "En attente",
+  },
+  {
+    id: 3,
+    commande: "#12343",
+    date: "Avril 25, 2023",
+    total: "€79.99",
+    statut: "Annulé",
+  },
+  {
+    id: 4,
+    commande: "#12342",
+    date: "Avril 15, 2023",
+    total: "€59.99",
+    statut: "Livré",
+  },
+  {
+    id: 5,
+    commande: "#12341",
+    date: "Avril 5, 2023",
+    total: "€29.99",
+    statut: "Livré",
+  },
 ];
 
 export default function ServicesHistory() {
-  const [tableData, setTableData] = useState([]);
   const [sortBy, setSortBy] = useState("date");
+  const [data, setData] = useState(initialData);
+  const [originalData, setOriginalData] = useState([]);
 
   useEffect(() => {
-    setTableData(data);
+    setOriginalData(initialData);
   }, []);
 
-  function handleSortChange(value) {
-    setSortBy(value);
-
-    // Trier les données en fonction de la nouvelle valeur de tri
-    if (value === "date") {
-      setData([...data].sort((a, b) => new Date(a.date) - new Date(b.date)));
-    } else if (value === "number") {
-      setData(
-        [...data].sort(
-          (a, b) =>
-            parseInt(a.commande.substring(1)) -
-            parseInt(b.commande.substring(1))
-        )
-      );
-    } else if (value === "status") {
-      setData(
-        [...data].sort(
-          (a, b) => getStatusValue(a.statut) - getStatusValue(b.statut)
-        )
-      );
-    }
-  }
-
-  function getBadgeVariant(statut) {
-    if (statut === "Livré") {
-      return "validated";
-    } else if (statut === "En attente") {
-      return "pending";
-    } else if (statut === "Annulé") {
-      return "canceled";
-    }
-  }
-  const data = [
-    {
-      id: 1,
-      commande: "#12345",
-      date: "Mai 15, 2023",
-      total: "€99.99",
-      statut: "Livré",
-    },
-    {
-      id: 2,
-      commande: "#12344",
-      date: "Mai 10, 2023",
-      total: "€49.99",
-      statut: "En attente",
-    },
-    {
-      id: 3,
-      commande: "#12343",
-      date: "Avril 25, 2023",
-      total: "€79.99",
-      statut: "Annulé",
-    },
-    {
-      id: 4,
-      commande: "#12342",
-      date: "Avril 15, 2023",
-      total: "€59.99",
-      statut: "Livré",
-    },
-    {
-      id: 5,
-      commande: "#12341",
-      date: "Avril 5, 2023",
-      total: "€29.99",
-      statut: "Livré",
-    },
+  const sortOptions = [
+    { value: "date", label: "Date" },
+    { value: "number", label: "Numéro de commande" },
+    { value: "status", label: "Statut" },
   ];
 
-  function getStatusValue(statut) {
-    if (statut === "Livré") {
-      return 1;
-    } else if (statut === "En attente") {
-      return 2;
-    } else if (statut === "Annulé") {
-      return 3;
+  const getStatusValue = (status) => {
+    const statusOrder = {
+      Livré: 1,
+      "En attente": 2,
+      Annulé: 3,
+    };
+    return statusOrder[status];
+  };
+
+  const handleSortChange = (value) => {
+    // Restore original data when sorting by date after sorting by another criterion
+    if (value === "date" && sortBy !== "date") {
+      setData(originalData);
+      setSortBy("date");
+      return;
     }
-  }
+
+    setSortBy(value);
+
+    let sortedData;
+    if (value === "date") {
+      sortedData = [...data].sort(
+        (a, b) => new Date(b.date) - new Date(a.date)
+      );
+    } else if (value === "number") {
+      sortedData = [...data].sort(
+        (a, b) =>
+          parseInt(a.commande.substring(1)) - parseInt(b.commande.substring(1))
+      );
+    } else if (value === "status") {
+      sortedData = [...data].sort(
+        (a, b) => getStatusValue(a.statut) - getStatusValue(b.statut)
+      );
+    }
+    setData(sortedData);
+  };
 
   return (
     <div className="container mx-auto px-4 md:px-6 py-8">
@@ -128,7 +124,7 @@ export default function ServicesHistory() {
             <DropdownMenuContent align="end" className="w-[200px]">
               <DropdownMenuRadioGroup
                 value={sortBy}
-                onChange={handleSortChange}
+                onValueChange={handleSortChange}
               >
                 {sortOptions.map((option) => (
                   <DropdownMenuRadioItem
@@ -144,7 +140,7 @@ export default function ServicesHistory() {
           <div className="relative">
             <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 dark:text-gray-400" />
             <Input
-              className="pl-10 pr-4 py-2 rounded-md bg-white dark:bg-gray-950 focus:outline-none focus:ring-1 focus:ring-gray-900 dark:focus:ring-gray-50"
+              className="pl-10 pr-4 py-2 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-900"
               placeholder="Rechercher..."
               type="search"
             />
@@ -163,13 +159,21 @@ export default function ServicesHistory() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {tableData.map((row) => (
+            {data.map((row) => (
               <TableRow key={row.id}>
                 <TableCell className="font-medium">{row.commande}</TableCell>
                 <TableCell>{row.date}</TableCell>
                 <TableCell>{row.total}</TableCell>
                 <TableCell>
-                  <Badge variant={getBadgeVariant(row.statut)}>
+                  <Badge
+                    variant={
+                      row.statut === "Livré"
+                        ? "validated"
+                        : row.statut === "En attente"
+                        ? "pending"
+                        : "canceled"
+                    }
+                  >
                     {row.statut}
                   </Badge>
                 </TableCell>
@@ -190,119 +194,6 @@ export default function ServicesHistory() {
               </TableRow>
             ))}
           </TableBody>
-
-          {/* <TableBody>
-            <TableRow>
-              <TableCell className="font-medium">#12345</TableCell>
-              <TableCell>Mai 15, 2023</TableCell>
-              <TableCell>€99.99</TableCell>
-              <TableCell>
-                <Badge variant="validated">Livré</Badge>
-              </TableCell>
-              <TableCell className="text-right">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button size="icon" variant="ghost">
-                      <MoveHorizontalIcon className="w-4 h-4" />
-                      <span className="sr-only">Order actions</span>
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end">
-                    <DropdownMenuItem>Voir l'offre</DropdownMenuItem>
-
-                    <DropdownMenuItem>Donner votre avis</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">#12344</TableCell>
-              <TableCell>Mai 10, 2023</TableCell>
-              <TableCell>€49.99</TableCell>
-              <TableCell>
-                <Badge variant="pending">En attente</Badge>
-              </TableCell>
-              <TableCell className="text-right">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button size="icon" variant="ghost">
-                      <MoveHorizontalIcon className="w-4 h-4" />
-                      <span className="sr-only">Order actions</span>
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end">
-                    <DropdownMenuItem>Voir l'offre</DropdownMenuItem>
-                    <DropdownMenuItem>Annulé l'offre</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">#12343</TableCell>
-              <TableCell>Avril 25, 2023</TableCell>
-              <TableCell>€79.99</TableCell>
-              <TableCell>
-                <Badge variant="canceled">Annulé</Badge>
-              </TableCell>
-              <TableCell className="text-right">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button size="icon" variant="ghost">
-                      <MoveHorizontalIcon className="w-4 h-4" />
-                      <span className="sr-only">Order actions</span>
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end">
-                    <DropdownMenuItem>Voir l'offre</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">#12342</TableCell>
-              <TableCell>Avril 15, 2023</TableCell>
-              <TableCell>€59.99</TableCell>
-              <TableCell>
-                <Badge variant="validated">Livré</Badge>
-              </TableCell>
-              <TableCell className="text-right">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button size="icon" variant="ghost">
-                      <MoveHorizontalIcon className="w-4 h-4" />
-                      <span className="sr-only">Order actions</span>
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end">
-                    <DropdownMenuItem>Voir l'offre</DropdownMenuItem>
-                    <DropdownMenuItem>Donner votre avis</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">#12341</TableCell>
-              <TableCell>Avril 5, 2023</TableCell>
-              <TableCell>€29.99</TableCell>
-              <TableCell>
-                <Badge variant="validated">Livré</Badge>
-              </TableCell>
-              <TableCell className="text-right">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button size="icon" variant="ghost">
-                      <MoveHorizontalIcon className="w-4 h-4" />
-                      <span className="sr-only">Order actions</span>
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end">
-                    <DropdownMenuItem>Voir l'offre</DropdownMenuItem>
-                    <DropdownMenuItem>Donner votre avis</DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </TableCell>
-            </TableRow>
-          </TableBody> */}
         </Table>
       </div>
     </div>
