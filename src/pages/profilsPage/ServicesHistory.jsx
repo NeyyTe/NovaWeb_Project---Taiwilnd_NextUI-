@@ -17,9 +17,101 @@ import {
   Table,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const sortOptions = [
+  { value: "date", label: "Date" },
+  { value: "number", label: "Numéro de commande" },
+  { value: "status", label: "Statut" },
+];
+
 export default function ServicesHistory() {
+  const [tableData, setTableData] = useState([]);
   const [sortBy, setSortBy] = useState("date");
+
+  useEffect(() => {
+    setTableData(data);
+  }, []);
+
+  function handleSortChange(value) {
+    setSortBy(value);
+
+    // Trier les données en fonction de la nouvelle valeur de tri
+    if (value === "date") {
+      setData([...data].sort((a, b) => new Date(a.date) - new Date(b.date)));
+    } else if (value === "number") {
+      setData(
+        [...data].sort(
+          (a, b) =>
+            parseInt(a.commande.substring(1)) -
+            parseInt(b.commande.substring(1))
+        )
+      );
+    } else if (value === "status") {
+      setData(
+        [...data].sort(
+          (a, b) => getStatusValue(a.statut) - getStatusValue(b.statut)
+        )
+      );
+    }
+  }
+
+  function getBadgeVariant(statut) {
+    if (statut === "Livré") {
+      return "validated";
+    } else if (statut === "En attente") {
+      return "pending";
+    } else if (statut === "Annulé") {
+      return "canceled";
+    }
+  }
+  const data = [
+    {
+      id: 1,
+      commande: "#12345",
+      date: "Mai 15, 2023",
+      total: "€99.99",
+      statut: "Livré",
+    },
+    {
+      id: 2,
+      commande: "#12344",
+      date: "Mai 10, 2023",
+      total: "€49.99",
+      statut: "En attente",
+    },
+    {
+      id: 3,
+      commande: "#12343",
+      date: "Avril 25, 2023",
+      total: "€79.99",
+      statut: "Annulé",
+    },
+    {
+      id: 4,
+      commande: "#12342",
+      date: "Avril 15, 2023",
+      total: "€59.99",
+      statut: "Livré",
+    },
+    {
+      id: 5,
+      commande: "#12341",
+      date: "Avril 5, 2023",
+      total: "€29.99",
+      statut: "Livré",
+    },
+  ];
+
+  function getStatusValue(statut) {
+    if (statut === "Livré") {
+      return 1;
+    } else if (statut === "En attente") {
+      return 2;
+    } else if (statut === "Annulé") {
+      return 3;
+    }
+  }
 
   return (
     <div className="container mx-auto px-4 md:px-6 py-8">
@@ -34,14 +126,18 @@ export default function ServicesHistory() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-[200px]">
-              <DropdownMenuRadioGroup value={sortBy} onChange={setSortBy}>
-                <DropdownMenuRadioItem value="date">Date</DropdownMenuRadioItem>
-                <DropdownMenuRadioItem value="number">
-                  Numéro Commande
-                </DropdownMenuRadioItem>
-                <DropdownMenuRadioItem value="status">
-                  Statut
-                </DropdownMenuRadioItem>
+              <DropdownMenuRadioGroup
+                value={sortBy}
+                onChange={handleSortChange}
+              >
+                {sortOptions.map((option) => (
+                  <DropdownMenuRadioItem
+                    key={option.value}
+                    value={option.value}
+                  >
+                    {option.label}
+                  </DropdownMenuRadioItem>
+                ))}
               </DropdownMenuRadioGroup>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -67,6 +163,35 @@ export default function ServicesHistory() {
             </TableRow>
           </TableHeader>
           <TableBody>
+            {tableData.map((row) => (
+              <TableRow key={row.id}>
+                <TableCell className="font-medium">{row.commande}</TableCell>
+                <TableCell>{row.date}</TableCell>
+                <TableCell>{row.total}</TableCell>
+                <TableCell>
+                  <Badge variant={getBadgeVariant(row.statut)}>
+                    {row.statut}
+                  </Badge>
+                </TableCell>
+                <TableCell className="text-right">
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button size="icon" variant="ghost">
+                        <MoveHorizontalIcon className="w-4 h-4" />
+                        <span className="sr-only">Order actions</span>
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuItem>Voir l'offre</DropdownMenuItem>
+                      <DropdownMenuItem>Donner votre avis</DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+
+          {/* <TableBody>
             <TableRow>
               <TableCell className="font-medium">#12345</TableCell>
               <TableCell>Mai 15, 2023</TableCell>
@@ -177,7 +302,7 @@ export default function ServicesHistory() {
                 </DropdownMenu>
               </TableCell>
             </TableRow>
-          </TableBody>
+          </TableBody> */}
         </Table>
       </div>
     </div>
