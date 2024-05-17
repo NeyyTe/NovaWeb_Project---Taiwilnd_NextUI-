@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenuTrigger,
@@ -57,32 +57,28 @@ const initialData = [
   },
 ];
 
+const statusOrder = {
+  Livré: 1,
+  "En attente": 2,
+  Annulé: 3,
+};
+
+const sortOptions = [
+  { value: "date", label: "Date" },
+  { value: "number", label: "Numéro de commande" },
+  { value: "status", label: "Statut" },
+];
+
 export default function ServicesHistory() {
   const [sortBy, setSortBy] = useState("date");
-  const [data, setData] = useState(initialData);
-  const [originalData, setOriginalData] = useState([]);
-
-  useEffect(() => {
-    setOriginalData(initialData);
-  }, []);
-
-  const sortOptions = [
-    { value: "date", label: "Date" },
-    { value: "number", label: "Numéro de commande" },
-    { value: "status", label: "Statut" },
-  ];
+  const originalData = useMemo(() => initialData, []);
+  const [data, setData] = useState(originalData);
 
   const getStatusValue = (status) => {
-    const statusOrder = {
-      Livré: 1,
-      "En attente": 2,
-      Annulé: 3,
-    };
     return statusOrder[status];
   };
 
   const handleSortChange = (value) => {
-    // Restore original data when sorting by date after sorting by another criterion
     if (value === "date" && sortBy !== "date") {
       setData(originalData);
       setSortBy("date");
@@ -93,20 +89,31 @@ export default function ServicesHistory() {
 
     let sortedData;
     if (value === "date") {
-      sortedData = [...data].sort(
-        (a, b) => new Date(b.date) - new Date(a.date)
-      );
+      sortedData = sortByDate([...data]);
     } else if (value === "number") {
-      sortedData = [...data].sort(
-        (a, b) =>
-          parseInt(a.commande.substring(1)) - parseInt(b.commande.substring(1))
-      );
+      sortedData = sortByNumber([...data]);
     } else if (value === "status") {
-      sortedData = [...data].sort(
-        (a, b) => getStatusValue(a.statut) - getStatusValue(b.statut)
-      );
+      sortedData = sortByStatus([...data]);
     }
     setData(sortedData);
+  };
+
+  // Triage du tableau par date
+  const sortByDate = (data) => {
+    return data.sort((a, b) => new Date(b.date) - new Date(a.date));
+  };
+  // Triage du tableau par le numéro de commande
+  const sortByNumber = (data) => {
+    data.forEach((item) => {
+      item.parsedCommande = parseInt(item.commande.substring(1));
+    });
+    return data.sort((a, b) => a.parsedCommande - b.parsedCommande);
+  };
+  // Triage du tableau par statut
+  const sortByStatus = (data) => {
+    return data.sort(
+      (a, b) => getStatusValue(a.statut) - getStatusValue(b.statut)
+    );
   };
 
   return (
@@ -138,7 +145,9 @@ export default function ServicesHistory() {
             </DropdownMenuContent>
           </DropdownMenu>
           <div className="relative">
-            <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 dark:text-gray-400" />
+            <button className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 dark:text-gray-400 bg-transparent border-none p-0 cursor-pointer">
+              <SearchIcon className="w-5 h-5" />
+            </button>
             <Input
               className="pl-10 pr-4 py-2 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-gray-900"
               placeholder="Rechercher..."
