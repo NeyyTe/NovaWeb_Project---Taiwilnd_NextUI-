@@ -33,6 +33,7 @@ function ProfilPageSingular() {
       <div className="h-screen w-full dark:bg-black  dark:bg-dot-white/[0.2] bg-dot-white/[0.2]">
         <div className=" ">{content}</div>
       </div>
+      <h2>yyy</h2>
     </>
   );
 }
