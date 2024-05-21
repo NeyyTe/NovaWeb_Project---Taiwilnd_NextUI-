@@ -98,7 +98,7 @@ export default function ServicesHistory() {
     setData(sortedData);
   };
 
-  // Triage du tableau par date
+  // Triage du tableau par la date
   const sortByDate = (data) => {
     return data.sort((a, b) => new Date(b.date) - new Date(a.date));
   };

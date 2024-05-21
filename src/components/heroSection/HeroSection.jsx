@@ -67,7 +67,7 @@ function HeroSection({ children }) {
                 />
               </AvatarGroup>
               <ul className="ml-12 list-disc">
-                <li>Plus de 3240 clients</li>
+                <li>Plus de 450 clients</li>
               </ul>
             </div>
           </div>

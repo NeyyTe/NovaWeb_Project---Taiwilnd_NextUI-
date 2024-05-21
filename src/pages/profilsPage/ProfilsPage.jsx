@@ -34,7 +34,7 @@ function ProfilsPage() {
             {profiles.map((profile) => (
               <NavLink
                 className={({ isActive }) => {
-                  return isActive ? "text-primary" : "";
+                  return isActive && "text-primary";
                 }}
                 key={profile}
                 to={`/profil/${profile}`}

@@ -11,8 +11,6 @@ function App() {
     <NextUIProvider navigate={navigate}>
       <Routes>
         <Route path="/" element={<LandingPage />} errorElement="" />
-        {/* <Route path="/profil" element={<ProfilsPage />} />
-        <Route path="/profil/:id" element={<ProfilPageSingular />} /> */}
         <Route path="/profil" element={<ProfilsPage />}>
           <Route path="/profil/:id" element={<ProfilPageSingular />} />
         </Route>

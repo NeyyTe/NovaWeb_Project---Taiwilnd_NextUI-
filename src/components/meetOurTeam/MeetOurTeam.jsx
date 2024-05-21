@@ -14,20 +14,20 @@ import "./meetOurTeam.css";
 export default function MeetOurTeam() {
   return (
     <>
-      <div className=" container mx-auto   flex mt-24  ">
+      <div className=" container mx-auto flex mt-24 gap-24 ">
         <div className="">
           <h2 className="text-4xl basis 1/4 relative">
-            Rencontrez notre équipe
-            {/* <Underline
+            Notre équipe
+            <Underline
               fill="#dd62ed"
-              size={450}
+              size={1450}
               width="100%"
               className="absolute top-[50px] left-0"
-            /> */}
+            />
           </h2>
         </div>
 
-        <div className="team basis-3/4 *:space-y-2 p-2">
+        <div className="team basis-3/4 *:space-y-2 p-4">
           <div className=" ">
             <div className="azer">
               <img

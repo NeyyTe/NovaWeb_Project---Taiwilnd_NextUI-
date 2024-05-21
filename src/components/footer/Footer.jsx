@@ -212,7 +212,11 @@ function Footer() {
           </div>
           <hr className="mt-16 mb-10 border-gray-600" />
           <p className="text-sm text-center text-gray-300">
-            © Copyright 2024, Tout droits réservé par Maréchal Maxence
+            © Copyright 2024, Tout droits réservé
+          </p>
+
+          <p className="text-sm text-center text-gray-300">
+            Fait par Maréchal Maxence
           </p>
         </div>
       </section>

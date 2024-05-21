@@ -16,7 +16,7 @@ function PouquoiNousSection() {
                 className="absolute top-[50px] left-0"
               />
             </h2>
-            <div className="text-lg basis-3/4 space-y-4">
+            <div className="text-xl basis-3/4 space-y-4 *:tracking-wide">
               <p>
                 Nous sommes bien plus qu'une simple entreprise. Chez NovaWeb,
                 nous sommes des créateurs passionnés, des innovateurs audacieux
