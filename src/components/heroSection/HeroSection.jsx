@@ -46,7 +46,7 @@ function HeroSection({ children }) {
               <AvatarGroup
                 className="justify-start "
                 max={4}
-                total={612}
+                total={272}
                 isBordered
               >
                 <Avatar
@@ -67,7 +67,7 @@ function HeroSection({ children }) {
                 />
               </AvatarGroup>
               <ul className="ml-12 list-disc">
-                <li>Plus de 450 clients</li>
+                <li>Plus de 450 clients satisfaits</li>
               </ul>
             </div>
           </div>

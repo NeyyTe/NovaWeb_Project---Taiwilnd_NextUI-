@@ -12,7 +12,7 @@ export default function ErrorPage() {
             Oops ! Erreur 404
           </h1>
           <p className="text-lg">
-            Tu t'es perdu dans l'espace temps, reviens parmi-nous !{" "}
+            Tu t'es perdu dans l'espace temps, reviens parmi-nouss !{" "}
           </p>
 
           <ChevronDown className="mx-auto" fill="currentColor" />
