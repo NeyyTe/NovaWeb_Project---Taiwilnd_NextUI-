@@ -3,23 +3,24 @@ import { useState } from "react";
 import { Switch } from "@nextui-org/switch";
 import { ChevronDown } from "../Icons.jsx";
 import { Select, SelectSection, SelectItem } from "@nextui-org/select";
-import { Avatar } from "@nextui-org/react";
+import { Avatar, Button } from "@nextui-org/react";
 import { Input } from "@nextui-org/input";
 import { RadioGroup, Radio } from "@nextui-org/radio";
 import { Divider } from "@nextui-org/divider";
 import { CalendarDate, parseDate } from "@internationalized/date";
 import { DateInput } from "@nextui-org/react";
-
 import {
   EyeSlashFilledIcon,
   EyeFilledIcon,
 } from "../password/EyeSlashFilledIcon.jsx";
-
+import { ToastAction } from "@/components/ui/toast";
+import { useToast } from "@/components/ui/use-toast";
+import { Toaster } from "@/components/ui/toaster";
 export default function Parametres() {
   const [isVisible, setIsVisible] = React.useState(false);
 
   const toggleVisibility = () => setIsVisible(!isVisible);
-
+  const { toast } = useToast();
   return (
     <div className="max-w-lg mt-10 px-4 m-8 ">
       <h1 className="text-3xl font-bold tracking-wide">Paramètres du Profil</h1>{" "}
@@ -200,12 +201,60 @@ export default function Parametres() {
           defaultValue="aucune"
           label="Sélectionnez le type de notifications que vous souhaitez recevoir."
         >
-          <Radio value="aucune">Aucune</Radio>
-          <Radio value="push">Notifications push</Radio>
-          <Radio value="email">Notifications par e-mail</Radio>
-          <Radio value="sms">Notifications par SMS</Radio>
-          <Radio value="sound">Notifications sonores</Radio>
+          <Radio
+            onClick={() => {
+              toast({
+                description: "Aucune notification sélectionné",
+              });
+            }}
+            value="aucune"
+          >
+            Aucune
+          </Radio>
+          <Radio
+            onClick={() => {
+              toast({
+                description: "Notification Push sélectionné",
+              });
+            }}
+            value="push"
+          >
+            Notifications push
+          </Radio>
+          <Radio
+            onClick={() => {
+              toast({
+                description: "Notification email sélectionné",
+              });
+            }}
+            value="email"
+          >
+            Notifications email
+          </Radio>
+          <Radio
+            onClick={() => {
+              toast({
+                description: "Notification SMS sélectionné",
+              });
+            }}
+            value="sms"
+          >
+            Notifications par SMS
+          </Radio>
+          <Radio
+            onClick={() => {
+              toast({
+                description:
+                  "Notification sonores sélectionné ( un son vous avertira d'une nouvelle notification )",
+              });
+            }}
+            value="sound"
+          >
+            Notifications sonores
+          </Radio>
         </RadioGroup>
+
+        <Toaster />
       </div>
     </div>
   );
