@@ -231,6 +231,7 @@ export const Lock = ({ fill, size, height, width, ...props }) => {
     </svg>
   );
 };
+
 export const GroupOfUsers = ({ fill, size, height, width, ...props }) => {
   return <img {...props} src={groupOfUsers} alt="" />;
 };

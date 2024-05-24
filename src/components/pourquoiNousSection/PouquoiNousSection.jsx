@@ -1,6 +1,7 @@
 import React from "react";
 import { Underline } from "../Icons";
-
+import NumberTicker from "../magicUi/NumberTicker";
+import "./pourquoinousSection.css";
 function PouquoiNousSection() {
   return (
     <>
@@ -40,28 +41,42 @@ function PouquoiNousSection() {
             </div>
           </div>
 
-          <div className="w-full flex justify-center mt-8  p-8 divide-x *:px-20">
-            <div className="flex flex-col  ">
-              <p className="text-7xl font-bold bg-gradient-to-br from-fuchsia-100 via-fuchsia-600 to-sky-800 inline-block text-transparent bg-clip-text">
-                9+
+          <div className="w-full grid grid-cols-4 mt-8  p-8 divide-x  *:px-20 sm:grid-auto-rows gridPourquoiNous">
+            <div className="">
+              <p className="text-7xl font-bold bg-gradient-to-br from-fuchsia-100 via-fuchsia-600 to-sky-800 inline-block text-transparent bg-clip-text whitespace-pre-wrap">
+                <NumberTicker
+                  className="text-7xl font-bold bg-gradient-to-br from-fuchsia-100 via-fuchsia-600 to-sky-800 inline-block text-transparent bg-clip-text"
+                  value={9}
+                />
+                +
               </p>
               <p className="">années d'expériences</p>
             </div>
             <div className=" ">
               <p className="text-7xl font-bold bg-gradient-to-br from-fuchsia-100 via-fuchsia-600 to-sky-800 inline-block text-transparent bg-clip-text ">
-                25
+                <NumberTicker
+                  className="text-7xl font-bold bg-gradient-to-br from-fuchsia-100 via-fuchsia-600 to-sky-800 inline-block text-transparent bg-clip-text"
+                  value={25}
+                />
               </p>
               <p>récompenses industrie</p>
             </div>
             <div className=" ">
               <p className="text-7xl font-bold bg-gradient-to-br from-fuchsia-100 via-fuchsia-600 to-sky-800 inline-block text-transparent bg-clip-text">
-                500
+                <NumberTicker
+                  className="text-7xl font-bold bg-gradient-to-br from-fuchsia-100 via-fuchsia-600 to-sky-800 inline-block text-transparent bg-clip-text"
+                  value={500}
+                />
               </p>
               <p>projets complétés</p>
             </div>
             <div className="">
               <p className="text-7xl font-bold bg-gradient-to-br from-fuchsia-100 via-fuchsia-600 to-sky-800 inline-block text-transparent bg-clip-text">
-                450+
+                <NumberTicker
+                  className="text-7xl font-bold bg-gradient-to-br from-fuchsia-100 via-fuchsia-600 to-sky-800 inline-block text-transparent bg-clip-text"
+                  value={450}
+                />
+                +
               </p>
               <p> clients satisfaits</p>
             </div>

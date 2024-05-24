@@ -17,7 +17,7 @@ import {
   DropdownMenu,
   Avatar,
 } from "@nextui-org/react";
-import { SearchIcon } from "../../../components/SearchIcon.jsx";
+import { SearchIcon } from "../SearchIcon.jsx";
 import {
   ChevronDown,
   Lock,
@@ -26,8 +26,8 @@ import {
   Server,
   TagUser,
   Scale,
-} from "../../../components/Icons.jsx";
-import { Logo } from "../../Logo.jsx";
+} from "../Icons.jsx";
+import { Logo } from "../Logo.jsx";
 
 const icons = {
   chevron: <ChevronDown fill="currentColor" size={16} />,

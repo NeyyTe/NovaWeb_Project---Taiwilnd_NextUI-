@@ -1,5 +1,5 @@
 import { Button } from "@nextui-org/react";
-import Header from "../ui/header/Header.jsx";
+import Header from "../header/Header.jsx";
 import Spotlight from "../ui/spotlight/Spotlight.jsx";
 import Spline from "@splinetool/react-spline";
 
