@@ -204,6 +204,7 @@ export default function Parametres() {
           <Radio
             onClick={() => {
               toast({
+                variant: "validated",
                 description: "Aucune notification sélectionné",
               });
             }}
@@ -214,6 +215,7 @@ export default function Parametres() {
           <Radio
             onClick={() => {
               toast({
+                variant: "validated",
                 description: "Notification Push sélectionné",
               });
             }}
@@ -224,6 +226,7 @@ export default function Parametres() {
           <Radio
             onClick={() => {
               toast({
+                variant: "validated",
                 description: "Notification email sélectionné",
               });
             }}
@@ -234,6 +237,7 @@ export default function Parametres() {
           <Radio
             onClick={() => {
               toast({
+                variant: "validated",
                 description: "Notification SMS sélectionné",
               });
             }}
@@ -244,6 +248,7 @@ export default function Parametres() {
           <Radio
             onClick={() => {
               toast({
+                variant: "validated",
                 description:
                   "Notification sonores sélectionné ( un son vous avertira d'une nouvelle notification )",
               });
