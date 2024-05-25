@@ -9,7 +9,7 @@ function PouquoiNousSection() {
         <div className=" container mx-auto rounded  bg-gray-800/50 p-8 ">
           <div className="flex ">
             <h2 className="text-3xl font-bold  basis-1/4 relative">
-              Pourquoi nous choisir
+              Pourquoi nous choisirr
               <Underline
                 fill="#dd62ed"
                 size={1250}
