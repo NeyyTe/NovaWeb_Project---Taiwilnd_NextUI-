@@ -1,23 +1,21 @@
 import React from "react";
 import { useState } from "react";
-import { Switch } from "@nextui-org/switch";
-import { ChevronDown } from "../Icons.jsx";
+
 import { Select, SelectSection, SelectItem } from "@nextui-org/select";
-import { Avatar, Button } from "@nextui-org/react";
-import { Input } from "@nextui-org/input";
+import { Avatar } from "@nextui-org/react";
+
 import { RadioGroup, Radio } from "@nextui-org/radio";
 import { Divider } from "@nextui-org/divider";
 import { CalendarDate, parseDate } from "@internationalized/date";
-import { DateInput } from "@nextui-org/react";
+import { DateInput, Input } from "@nextui-org/react";
 import {
   EyeSlashFilledIcon,
   EyeFilledIcon,
 } from "../password/EyeSlashFilledIcon.jsx";
-import { ToastAction } from "@/components/ui/toast";
 import { useToast } from "@/components/ui/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 export default function Parametres() {
-  const [isVisible, setIsVisible] = React.useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => setIsVisible(!isVisible);
   const { toast } = useToast();
@@ -29,22 +27,19 @@ export default function Parametres() {
       <div className="space-y-4 bg-primary-50/70  p-8 rounded">
         <h1 className="text-xl text-gray-100">Informations Personnel</h1>
         <div className="flex w-full flex-wrap md:flex-nowrap gap-4 ">
-          <Input type="text" label="Nom" placeholder="Zoey" />
-          <Input type="text" label="Prénom" placeholder="Doe" />
+          <Input isReadOnly type="text" label="Nom" defaultValue="Zoey" />
+          <Input isReadOnly type="text" label="Prénom" defaultValue="Doe" />
         </div>
 
         <div>
           {" "}
           <Input
+            isReadOnly
             type="email"
             label="Email"
-            placeholder="zoey@gmail.com"
-            // endContent={
-            //   <span className="text-xs self-center text-green-500">
-            //     Email vérifié
-            //   </span>
-            // }
-          />
+            defaultValue="zoey@gmail.com"
+            className="max-w-xs "
+          />{" "}
         </div>
         <div className="">
           <Input
