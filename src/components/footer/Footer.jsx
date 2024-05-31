@@ -202,10 +202,13 @@ function Footer() {
 
                 <Button
                   // type="submit"
-                  className="text-lg tracking-wide  text-black font-semibold mt-3"
+                  className="text-lg tracking-wide  text-white font-semibold mt-3 bg-gradient-to-r from-purple-700 to-fuchsia-800"
                   color="primary"
                 >
                   <span>S'abonner </span>
+                  <div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
+                    <div class="relative h-full w-8 bg-white/20"></div>
+                  </div>
                 </Button>
               </form>
             </div>

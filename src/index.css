@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/*! Poppins fonts */
-
+/* Poppins fonts */
 @font-face {
   font-family: "Poppins-Regular";
   src: url("./components/fonts/poppins/Poppins-Regular.ttf") format("truetype");
@@ -17,7 +16,7 @@
   src: url("./components/fonts/poppins/Poppins-Bold.ttf") format("truetype");
 }
 
-/*! Supreme fonts */
+/* Supreme fonts */
 @font-face {
   font-family: "Supreme-Medium";
   src: url("./components/fonts/supreme/Supreme-Medium.woff2") format("woff2");
@@ -27,14 +26,30 @@
   src: url("./components/fonts/supreme/Supreme-Regular.woff2") format("woff2");
 }
 
+/*Global Reset*/
 h1,
 h2 {
   font-family: "Poppins-Medium";
+  color: white;
 }
 h4 {
   font-family: "Poppins-Regular";
+  color: white;
 }
 
 p {
-  font-family: "Supreme-Regular";
+  font-family: "Supreme-Medium";
+}
+
+/*ScrollBar*/
+*::-webkit-scrollbar {
+  width: 7px;
+}
+*::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #66126f;
 }

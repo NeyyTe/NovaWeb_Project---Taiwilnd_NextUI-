@@ -1,6 +1,3 @@
-import React from "react";
-import oooscillate from "../../assets/oooscillate.svg";
-
 import { HoverEffect } from "../ui/card-hover-effect/cardHover";
 import {
   HtmlTag,

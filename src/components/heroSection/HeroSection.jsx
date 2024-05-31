@@ -2,8 +2,6 @@ import { Button } from "@nextui-org/react";
 import Header from "../header/Header.jsx";
 import Spotlight from "../ui/spotlight/Spotlight.jsx";
 import Spline from "@splinetool/react-spline";
-
-// import TypewriterEffectSmoothDemo from "./utils/TypewriterEffectTest.jsx";
 import { Avatar, AvatarGroup } from "@nextui-org/react";
 function HeroSection({ children }) {
   return (
@@ -23,13 +21,13 @@ function HeroSection({ children }) {
           </div>
 
           <div className="  space-y-8 w-8/12 ">
-            <h1 className="text-8xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 ">
+            <h1 className="text-8xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 animate-fade-down animate-ease-in-out">
               Où vos idées deviennent une{" "}
               <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-fuchsia-700 inline-block text-transparent bg-clip-text">
                 réalité
               </span>
             </h1>
-            <p className="font-supremeReg  text-lg tracking-wide">
+            <p className="font-supremeReg  text-lg tracking-wide text-foreground">
               Nous sommes une équipe passionnée de designers et de développeurs
               web, dédiée à créer{" "}
               <b className="text-foreground">
@@ -38,8 +36,11 @@ function HeroSection({ children }) {
               pour nos clients.
             </p>
 
-            <Button className="text-lg tracking-wide " color="primary">
-              <b>Acheter </b>
+            <Button className="text-lg tracking-wide bg-gradient-to-r from-purple-700 to-fuchsia-800 group  ">
+              <b className="">Acheter </b>
+              <div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
+                <div class="relative h-full w-8 bg-white/20"></div>
+              </div>
             </Button>
 
             <div className="flex items-center">

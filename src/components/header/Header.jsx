@@ -43,6 +43,7 @@ const icons = {
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
   const menuItems = [
     "Profile",
     "Dashboard",
@@ -67,7 +68,6 @@ export default function Header() {
           <div className="hidden sm:block">
             <Logo />
           </div>
-          {/* <p className="hidden sm:block font-bold text-inherit">ACME</p> */}
         </NavbarBrand>
         <NavbarContent className="hidden sm:flex gap-3">
           <Dropdown>

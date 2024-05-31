@@ -7,8 +7,8 @@ function PouquoiNousSection() {
     <>
       <div className="  relative  pt-7 z-[1]">
         <div className=" container mx-auto rounded  bg-gray-800/50 p-8 ">
-          <div className="flex ">
-            <h2 className="text-3xl font-bold  basis-1/4 relative">
+          <div className="flex p-4">
+            <h2 className="text-3xl font-bold  basis-1/4 relative ">
               Pourquoi nous choisir
               <Underline
                 fill="#dd62ed"
@@ -18,7 +18,7 @@ function PouquoiNousSection() {
               />
             </h2>
 
-            <div className="text-xl basis-3/4 space-y-4 *:tracking-wide">
+            <div className="text-xl basis-3/4 space-y-4 *:tracking-wide px-6">
               <p>
                 Nous sommes bien plus qu'une simple entreprise. Chez NovaWeb,
                 nous sommes des créateurs passionnés, des innovateurs audacieux
