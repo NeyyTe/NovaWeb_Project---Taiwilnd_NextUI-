@@ -23,7 +23,6 @@ export default function Parametres() {
     <div className="max-w-lg mt-10 px-4 m-8 ">
       <h1 className="text-3xl font-bold tracking-wide">Paramètres du Profil</h1>{" "}
       <Divider className="bg-gradient-to-r from-purple-500/10 via-fuchsia-500 to-violet-800/10 my-8" />
-      {/* <hr className="bg-gradient-to-r from-purple-500/10 via-fuchsia-500 to-violet-800/10 h-1 border-none rounded my-8" /> */}
       <div className="space-y-4 bg-primary-50/70  p-8 rounded">
         <h1 className="text-xl text-gray-100">Informations Personnel</h1>
         <div className="flex w-full flex-wrap md:flex-nowrap gap-4 ">
