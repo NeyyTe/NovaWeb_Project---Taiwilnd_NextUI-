@@ -1,5 +1,3 @@
-import React from "react";
-
 //Avatars
 import Avatar1 from "../../assets/Avatars/Avatar 1.svg";
 import Avatar2 from "../../assets/Avatars/Avatar 2.svg";
@@ -9,14 +7,14 @@ import Avatar5 from "../../assets/Avatars/Avatar 5.svg";
 import Avatar6 from "../../assets/Avatars/Avatar 6.svg";
 
 import { Underline } from "../Icons";
-
+import Spline from "@splinetool/react-spline";
 import "./meetOurTeam.css";
 export default function MeetOurTeam() {
   return (
     <>
-      <div className=" container mx-auto flex mt-24 gap-24 ">
-        <div className="">
-          <h2 className="text-4xl basis 1/4 relative">
+      <div className=" container mx-auto flex mt-24 gap-24  ">
+        <div className="relative">
+          <h2 className="text-4xl basis 1/4 relative ">
             Notre équipe
             <Underline
               fill="#dd62ed"
@@ -98,6 +96,10 @@ export default function MeetOurTeam() {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        {" "}
+        <Spline scene="https://prod.spline.design/fjaj44aVR2tBWLj1/scene.splinecode" />
       </div>
     </>
   );

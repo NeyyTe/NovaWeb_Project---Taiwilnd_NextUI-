@@ -7,7 +7,7 @@ function HeroSection({ children }) {
   return (
     <>
       <div className=" w-full h-full dark:bg-black  dark:bg-dot-white/[0.2] bg-dot-white/[0.2] -z-20">
-        {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_45%,black)]"></div> */}
+        {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_55%,black)]"></div> */}
 
         <Header />
         <Spotlight
@@ -38,8 +38,8 @@ function HeroSection({ children }) {
 
             <Button className="text-lg tracking-wide bg-gradient-to-r from-purple-700 to-fuchsia-800 group  ">
               <b className="">Acheter </b>
-              <div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
-                <div class="relative h-full w-8 bg-white/20"></div>
+              <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
+                <div className="relative h-full w-8 bg-white/20"></div>
               </div>
             </Button>
 
