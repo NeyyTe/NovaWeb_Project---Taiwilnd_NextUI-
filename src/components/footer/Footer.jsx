@@ -218,7 +218,7 @@ function Footer() {
             © Copyright 2024, Tout droits réservé
           </p>
 
-          <p className="text-sm text-center text-gray-300">Maréchal Maxence</p>
+          <p className="text-sm text-center text-gray-300">Maréchal Maxencee</p>
         </div>
       </section>
     </>
