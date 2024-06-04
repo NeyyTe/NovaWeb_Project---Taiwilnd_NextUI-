@@ -3,6 +3,7 @@ import Header from "../header/Header.jsx";
 import Spotlight from "../ui/spotlight/Spotlight.jsx";
 import Spline from "@splinetool/react-spline";
 import { Avatar, AvatarGroup } from "@nextui-org/react";
+import RevealAnimation from "../revealAnimation/RevealAnimation.jsx";
 function HeroSection({ children }) {
   return (
     <>
@@ -10,31 +11,36 @@ function HeroSection({ children }) {
         {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_55%,black)]"></div> */}
 
         <Header />
-        <Spotlight
+        {/* <Spotlight
           className="-top-40 left-0 md:left-90 md:-top-40"
           fill="white"
-        />
+        /> */}
 
         <section className="  w-full  grid grid-cols-2 w-full mx-auto gap-4 items-center">
           <div className=" h-[80vh]   ">
-            <Spline scene="https://prod.spline.design/iv6vLiWEDQbUOuwu/scene.splinecode" />
+            {/* <Spline scene="https://prod.spline.design/iv6vLiWEDQbUOuwu/scene.splinecode" /> */}
           </div>
 
           <div className="  space-y-8 w-8/12 ">
-            <h1 className="text-8xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 animate-fade-down animate-ease-in-out">
-              Où vos idées deviennent une{" "}
-              <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-fuchsia-700 inline-block text-transparent bg-clip-text">
-                réalité
-              </span>
-            </h1>
-            <p className="font-supremeReg  text-lg tracking-wide text-foreground">
-              Nous sommes une équipe passionnée de designers et de développeurs
-              web, dédiée à créer{" "}
-              <b className="text-foreground">
-                des sites web uniques et impactants
-              </b>{" "}
-              pour nos clients.
-            </p>
+            <RevealAnimation>
+              <h1 className="text-8xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 animate-fade-down animate-ease-in-out">
+                Où vos idées deviennent une{" "}
+                <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-fuchsia-700 inline-block text-transparent bg-clip-text">
+                  réalité
+                </span>
+              </h1>
+            </RevealAnimation>
+
+            <RevealAnimation>
+              <p className="font-supremeReg  text-lg tracking-wide text-foreground">
+                Nous sommes une équipe passionnée de designers et de
+                développeurs web, dédiée à créer{" "}
+                <b className="text-foreground">
+                  des sites web uniques et impactants
+                </b>{" "}
+                pour nos clients.
+              </p>
+            </RevealAnimation>
 
             <Button className="text-lg tracking-wide bg-gradient-to-r from-purple-700 to-fuchsia-800 group  ">
               <b className="">Acheter </b>

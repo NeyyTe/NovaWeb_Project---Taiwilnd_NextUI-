@@ -189,7 +189,7 @@ export default function Parametres() {
         </div>
       </div>
       {/* <Divider className="bg-gradient-to-r from-purple-500/10 via-fuchsia-500 to-violet-800/10 my-8" /> */}
-      <div className="bg-primary-50/70 p-8 rounded mt-4">
+      <div className="bg-primary-50/70 p-8 rounded mt-2">
         <h1 className="text-xl text-gray-100">Notifications</h1>
         <RadioGroup
           defaultValue="aucune"
@@ -198,7 +198,7 @@ export default function Parametres() {
           <Radio
             onClick={() => {
               toast({
-                variant: "validated",
+                variant: "default",
                 description: "Aucune notification sélectionné",
               });
             }}
@@ -209,7 +209,7 @@ export default function Parametres() {
           <Radio
             onClick={() => {
               toast({
-                variant: "validated",
+                variant: "default",
                 description: "Notification Push sélectionné",
               });
             }}
@@ -220,7 +220,7 @@ export default function Parametres() {
           <Radio
             onClick={() => {
               toast({
-                variant: "validated",
+                variant: "default",
                 description: "Notification email sélectionné",
               });
             }}
@@ -231,7 +231,7 @@ export default function Parametres() {
           <Radio
             onClick={() => {
               toast({
-                variant: "validated",
+                variant: "default",
                 description: "Notification SMS sélectionné",
               });
             }}
@@ -242,7 +242,7 @@ export default function Parametres() {
           <Radio
             onClick={() => {
               toast({
-                variant: "validated",
+                variant: "default",
                 description:
                   "Notification sonores sélectionné ( un son vous avertira d'une nouvelle notification )",
               });
