@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, forwardRef } from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenuTrigger,
@@ -18,7 +18,10 @@ import {
   Table,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
+import { motion, AnimatePresence } from "framer-motion";
 
+/* The `initialData` constant is an array of objects that represents sample data for a service history.
+Each object in the array represents a service entry with the following properties: */
 const initialData = [
   {
     id: 1,
@@ -57,12 +60,18 @@ const initialData = [
   },
 ];
 
+/* The `statusOrder` constant is creating an object that maps different statuses to numerical values.
+In this case, it is assigning numerical values to three different statuses: "Livré" (Delivered) is
+mapped to 1, "En attente" (Pending) is mapped to 2, and "Annulé" (Cancelled) is mapped to 3. */
 const statusOrder = {
   Livré: 1,
   "En attente": 2,
   Annulé: 3,
 };
 
+/* The `sortOptions` constant is creating an array of objects that define different sorting options
+available in the dropdown menu for the services history component. Each object in the array
+represents a sorting option with two properties: */
 const sortOptions = [
   { value: "date", label: "Date" },
   { value: "number", label: "Numéro de commande" },
@@ -87,6 +96,8 @@ export default function ServicesHistory() {
 
     setSortBy(value);
 
+    /* This code snippet is handling the sorting functionality based on the selected sorting option
+   (`value`) in the dropdown menu. Here's a breakdown of what it does: */
     let sortedData;
     if (value === "date") {
       sortedData = sortByDate([...data]);
@@ -98,6 +109,12 @@ export default function ServicesHistory() {
     setData(sortedData);
   };
 
+  /**
+   * The above functions sort an array of data by date, number, and status respectively.
+   * @returns The code snippet provided contains three functions for sorting an array of data by
+   * different criteria: `sortByDate`, `sortByNumber`, and `sortByStatus`. Each function sorts the data
+   * array based on a specific property or condition.
+   */
   // Triage du tableau par la date
   const sortByDate = (data) => {
     return data.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -168,40 +185,50 @@ export default function ServicesHistory() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {data.map((row) => (
-              <TableRow key={row.id}>
-                <TableCell className="font-medium">{row.commande}</TableCell>
-                <TableCell>{row.date}</TableCell>
-                <TableCell>{row.total}</TableCell>
-                <TableCell>
-                  <Badge
-                    variant={
-                      row.statut === "Livré"
-                        ? "validated"
-                        : row.statut === "En attente"
-                        ? "pending"
-                        : "canceled"
-                    }
-                  >
-                    {row.statut}
-                  </Badge>
-                </TableCell>
-                <TableCell className="text-right">
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button size="icon" variant="ghost">
-                        <MoveHorizontalIcon className="w-4 h-4" />
-                        <span className="sr-only">Order actions</span>
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                      <DropdownMenuItem>Voir l'offre</DropdownMenuItem>
-                      <DropdownMenuItem>Donner votre avis</DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </TableCell>
-              </TableRow>
-            ))}
+            <AnimatePresence>
+              {data.map((row, index) => (
+                <motion.tr
+                  key={row.id}
+                  initial={false}
+                  layoutId={index} // Unique layout ID for each row
+                  animate={{ y: 0 }} // Animate to default position
+                  exit={{ y: index * 20 }} // Animate to new position based on index
+                  transition={{ duration: 0.3 }}
+                  className="border-b"
+                >
+                  <TableCell className="font-medium">{row.commande}</TableCell>
+                  <TableCell>{row.date}</TableCell>
+                  <TableCell>{row.total}</TableCell>
+                  <TableCell>
+                    <Badge
+                      variant={
+                        row.statut === "Livré"
+                          ? "validated"
+                          : row.statut === "En attente"
+                          ? "pending"
+                          : "canceled"
+                      }
+                    >
+                      {row.statut}
+                    </Badge>
+                  </TableCell>
+                  <TableCell className="text-right">
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button size="icon" variant="ghost">
+                          <MoveHorizontalIcon className="w-4 h-4" />
+                          <span className="sr-only">Order actions</span>
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="end">
+                        <DropdownMenuItem>Voir l'offre</DropdownMenuItem>
+                        <DropdownMenuItem>Donner votre avis</DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </TableCell>
+                </motion.tr>
+              ))}
+            </AnimatePresence>
           </TableBody>
         </Table>
       </div>

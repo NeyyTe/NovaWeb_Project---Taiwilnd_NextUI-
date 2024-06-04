@@ -206,8 +206,8 @@ function Footer() {
                   color="primary"
                 >
                   <span>S'abonner </span>
-                  <div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
-                    <div class="relative h-full w-8 bg-white/20"></div>
+                  <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
+                    <div className="relative h-full w-8 bg-white/20"></div>
                   </div>
                 </Button>
               </form>
@@ -218,7 +218,7 @@ function Footer() {
             © Copyright 2024, Tout droits réservé
           </p>
 
-          <p className="text-sm text-center text-gray-300">Maréchal Maxencee</p>
+          <p className="text-sm text-center text-gray-300">Maréchal Maxence</p>
         </div>
       </section>
     </>

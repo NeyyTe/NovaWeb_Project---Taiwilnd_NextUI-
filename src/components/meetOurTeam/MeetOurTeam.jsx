@@ -97,10 +97,6 @@ export default function MeetOurTeam() {
           </div>
         </div>
       </div>
-      <div>
-        {" "}
-        <Spline scene="https://prod.spline.design/fjaj44aVR2tBWLj1/scene.splinecode" />
-      </div>
     </>
   );
 }

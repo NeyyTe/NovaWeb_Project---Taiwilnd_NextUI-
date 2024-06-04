@@ -10,7 +10,7 @@ function TestimonialsSection({ children }) {
           className=" absolute inset-0 testiimg w-full  -z-10 "
           alt=""
         />
-        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 mt-24 space-x-12  ">
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2  space-x-12  ">
           <div>
             <img src={teamWorking} className="rounded" alt="teamworking" />
           </div>

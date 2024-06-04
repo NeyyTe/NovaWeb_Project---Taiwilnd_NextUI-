@@ -2,6 +2,7 @@ import React from "react";
 import { Underline } from "../Icons";
 import NumberTicker from "../magicUi/NumberTicker";
 import "./pourquoinousSection.css";
+import Spline from "@splinetool/react-spline";
 function PouquoiNousSection() {
   return (
     <>
@@ -26,11 +27,11 @@ function PouquoiNousSection() {
                 transformer les idées en réalité.{" "}
               </p>
               <p>
-                Depuis NovaWeb, nous avons œuvré sans relâche pour offrir à nos
-                clients des solutions exceptionnelles qui dépassent leurs
-                attentes. Notre équipe hautement qualifiée combine expertise
-                technique et créativité pour façonner des expériences uniques
-                qui inspirent, captivent et engagent.
+                Nous avons œuvré sans relâche pour offrir à nos clients des
+                solutions exceptionnelles qui dépassent leurs attentes. Notre
+                équipe hautement qualifiée combine expertise technique et
+                créativité pour façonner des expériences uniques qui inspirent,
+                captivent et engagent.
               </p>{" "}
               <p>
                 Que vous soyez une start-up ambitieuse ou une grande entreprise
@@ -83,6 +84,9 @@ function PouquoiNousSection() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="h-[32rem] p-4">
+        <Spline scene="https://prod.spline.design/nUfdKrDAVw9MfrsJ/scene.splinecode" />
       </div>
     </>
   );

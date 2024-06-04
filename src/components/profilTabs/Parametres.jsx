@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 
 import { Select, SelectSection, SelectItem } from "@nextui-org/select";
@@ -40,6 +39,7 @@ export default function Parametres() {
             className="max-w-xs "
           />{" "}
         </div>
+
         <div className="">
           <Input
             label="Password"
