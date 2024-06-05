@@ -7,7 +7,7 @@ import Avatar5 from "../../assets/Avatars/Avatar 5.svg";
 import Avatar6 from "../../assets/Avatars/Avatar 6.svg";
 
 import { Underline } from "../Icons";
-import Spline from "@splinetool/react-spline";
+
 import "./meetOurTeam.css";
 export default function MeetOurTeam() {
   return (

@@ -9,6 +9,9 @@ import {
   Underline,
 } from "@/components/Icons";
 import RevealAnimation from "../revealAnimation/RevealAnimation";
+import { forwardRef } from "react";
+import { motion } from "framer-motion";
+
 export default function CardHoverGridEffect() {
   const projects = [
     {
@@ -57,27 +60,25 @@ export default function CardHoverGridEffect() {
 
   return (
     <>
-      <RevealAnimation>
-        <div>
-          <div className="container mx-auto">
-            <h2 className="p-2 text-4xl relative">
-              Nos Services
-              <Underline
-                fill="#dd62ed"
-                size={230}
-                width="100%"
-                className="absolute top-[55px] left-0"
-              />
-            </h2>
-          </div>
-
-          <div className="mt-4">
-            <HoverEffect items={projects} />
-          </div>
+      <div>
+        <div className="container mx-auto">
+          <h2 className="p-2 text-4xl relative">
+            Nos Services
+            <Underline
+              fill="#dd62ed"
+              size={230}
+              width="100%"
+              className="absolute top-[55px] left-0"
+            />
+          </h2>
         </div>
 
-        <hr className=" max-w-3xl mx-auto bg-gradient-to-r from-purple-500/10 via-fuchsia-500 to-violet-800/10 h-1 border-none rounded my-8" />
-      </RevealAnimation>
+        <div className="mt-4">
+          <HoverEffect items={projects} />
+        </div>
+      </div>
+
+      <hr className=" max-w-3xl mx-auto bg-gradient-to-r from-purple-500/10 via-fuchsia-500 to-violet-800/10 h-1 border-none rounded my-8" />
     </>
   );
 }

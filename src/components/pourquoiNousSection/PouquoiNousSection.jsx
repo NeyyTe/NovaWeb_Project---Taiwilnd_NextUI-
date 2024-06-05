@@ -88,7 +88,7 @@ function PouquoiNousSection() {
             </div>
           </div>
         </div>
-        <div className="h-[32rem] p-4">
+        <div className="h-[28rem] p-4">
           <Spline scene="https://prod.spline.design/nUfdKrDAVw9MfrsJ/scene.splinecode" />
         </div>
       </RevealAnimation>

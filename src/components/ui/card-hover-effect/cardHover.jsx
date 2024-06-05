@@ -1,10 +1,39 @@
 import { useState } from "react";
 import { cn } from "@/utils/cn";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import bbblurry1 from "../../../assets/bbblurry1.svg";
+import { useRef } from "react";
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: -10,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 export const HoverEffect = ({ items, className }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-200px 0px" });
 
   return (
     <div className="relative z-[1]">
@@ -13,17 +42,22 @@ export const HoverEffect = ({ items, className }) => {
         alt="Image blurry orbs"
         className="blurrybg absolute -z-[1] -top-32 "
       />
-      <div
+      <motion.div
+        ref={ref}
         className={cn(
           "container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-5 "
         )}
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
       >
         {items.map((item, idx) => (
-          <div
+          <motion.div
             key={item.link}
             className="relative group block p-2 h-full w-full"
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
+            variants={cardVariants}
           >
             <AnimatePresence>
               {hoveredIndex === idx && (
@@ -40,9 +74,9 @@ export const HoverEffect = ({ items, className }) => {
               )}
             </AnimatePresence>
             <Card item={item} />
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
@@ -74,6 +108,7 @@ const CardTitle = ({ children }) => {
     </>
   );
 };
+
 const CardIcons = ({ children }) => {
   return <div className={cn("  ")}>{children}</div>;
 };
