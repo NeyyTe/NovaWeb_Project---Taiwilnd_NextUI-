@@ -1,9 +1,8 @@
-import { Button } from "@nextui-org/react";
-import Header from "../header/Header.jsx";
-import Spotlight from "../ui/spotlight/Spotlight.jsx";
+import { Avatar, AvatarGroup, Button } from "@nextui-org/react";
 import Spline from "@splinetool/react-spline";
-import { Avatar, AvatarGroup } from "@nextui-org/react";
+import Header from "../header/Header.jsx";
 import RevealAnimation from "../revealAnimation/RevealAnimation.jsx";
+import Spotlight from "../ui/spotlight/Spotlight.jsx";
 function HeroSection({ children }) {
   return (
     <>
@@ -16,12 +15,12 @@ function HeroSection({ children }) {
           fill="white"
         />
 
-        <section className="  w-full  grid grid-cols-2 w-full mx-auto gap-4 items-center">
-          <div className=" h-[80vh]   ">
+        <section className="  w-full  grid grid-cols-1 2xl:grid-cols-2 w-full mx-auto gap-4 items-center">
+          <div className=" h-[80vh] hidden 2xl:block">
             <Spline scene="https://prod.spline.design/iv6vLiWEDQbUOuwu/scene.splinecode" />
           </div>
 
-          <div className="  space-y-8 w-8/12 ">
+          <div className="  space-y-8 w-8/12 mx-auto my-12 2xl:">
             <RevealAnimation>
               <h1 className="text-8xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 animate-fade-down animate-ease-in-out">
                 Où vos idées deviennent une{" "}

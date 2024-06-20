@@ -1,16 +1,13 @@
-import { HoverEffect } from "../ui/card-hover-effect/cardHover";
 import {
-  HtmlTag,
-  UiuxIcon,
-  Performance,
-  Lock,
   GroupOfUsers,
+  HtmlTag,
+  Lock,
+  Performance,
   SupportIcon,
+  UiuxIcon,
   Underline,
 } from "@/components/Icons";
-import RevealAnimation from "../revealAnimation/RevealAnimation";
-import { forwardRef } from "react";
-import { motion } from "framer-motion";
+import { HoverEffect } from "../ui/card-hover-effect/cardHover";
 
 export default function CardHoverGridEffect() {
   const projects = [
@@ -73,7 +70,7 @@ export default function CardHoverGridEffect() {
           </h2>
         </div>
 
-        <div className="mt-4">
+        <div className="mt-4 p-4">
           <HoverEffect items={projects} />
         </div>
       </div>

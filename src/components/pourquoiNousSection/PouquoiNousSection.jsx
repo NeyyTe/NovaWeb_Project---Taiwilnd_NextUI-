@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/no-unescaped-entities */
 import { Underline } from "../Icons";
 import NumberTicker from "../magicUi/NumberTicker";
 import "./pourquoinousSection.css";
@@ -55,6 +55,7 @@ function PouquoiNousSection() {
                   />
                   +
                 </p>
+
                 <p className="">années d'expériences</p>
               </div>
               <div className=" ">

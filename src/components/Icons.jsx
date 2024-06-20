@@ -1,4 +1,3 @@
-import React from "react";
 import groupOfUsers from "../assets/groupOfUsers.svg";
 import supportIcon from "../assets/supportIcon.svg";
 
@@ -258,13 +257,13 @@ export const Swirl = ({ fill, size, height, width, ...props }) => {
           id="oooscillate-grad"
         >
           <stop
-            stop-color="hsl(206, 75%, 49%)"
-            stop-opacity="1"
+            stopColor="hsl(206, 75%, 49%)"
+            stopOpacity="1"
             offset="0%"
           ></stop>
           <stop
-            stop-color="hsl(331, 90%, 56%)"
-            stop-opacity="1"
+            stopColor="hsl(331, 90%, 56%)"
+            stopOpacity="1"
             offset="100%"
           ></stop>
         </linearGradient>

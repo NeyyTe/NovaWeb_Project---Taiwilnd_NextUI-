@@ -1,9 +1,9 @@
-import { useState } from "react";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
 import bbblurry1 from "../../../assets/bbblurry1.svg";
-import { useRef } from "react";
 
+// Animation framer motion des cards
 const containerVariants = {
   hidden: {
     opacity: 0,
@@ -30,7 +30,7 @@ const cardVariants = {
   },
 };
 
-export const HoverEffect = ({ items, className }) => {
+export const HoverEffect = ({ items }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-200px 0px" });
@@ -117,7 +117,7 @@ const CardDescription = ({ children }) => {
   return (
     <p
       className={cn(
-        "mt-6 text-gray-300 tracking-wide leading-relaxed  text-sm "
+        "mt-4 text-gray-300 tracking-wide leading-relaxed  text-sm "
       )}
     >
       {children}

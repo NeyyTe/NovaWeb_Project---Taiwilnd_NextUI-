@@ -13,7 +13,7 @@ function RevealAnimation({ children }) {
   }, [isInView, mainControls]);
 
   return (
-    <div ref={ref} style={{ position: "relative", overflow: "hidden" }}>
+    <div ref={ref} style={{ position: "relative" }}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },

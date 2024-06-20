@@ -1,5 +1,6 @@
-import teamWorking from "../../assets/teamWorking.jpg";
+/* eslint-disable react/no-unescaped-entities */
 import oooscillate from "../../assets/oooscillate.svg";
+import teamWorking from "../../assets/teamWorking.jpg";
 import { Underline } from "../Icons";
 import RevealAnimation from "../revealAnimation/RevealAnimation";
 function TestimonialsSection({ children }) {
@@ -28,12 +29,13 @@ function TestimonialsSection({ children }) {
                 />
               </h2>
 
-              <div className="space-y-6 mt-[72px] *:leading-snug">
+              <div className="space-y-6 mt-[72px] *:leading-tight ">
                 <p className="text-3xl">
                   " NovaWeb a transformé notre présence en ligne. Leur équipe
                   talentueuse a su capturer notre vision et la traduire en un
                   site web élégant et fonctionnel. "
                 </p>
+
                 <p className="text-3xl ">
                   Un grand merci à toute l'équipe pour leur professionnalisme et
                   leur dévouement !{" "}
