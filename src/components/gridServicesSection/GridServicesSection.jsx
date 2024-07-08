@@ -8,7 +8,7 @@ import {
   Underline,
 } from "@/components/Icons";
 import { HoverEffect } from "../ui/card-hover-effect/cardHover";
-
+import "./GridServicesSection";
 export default function CardHoverGridEffect() {
   const projects = [
     {
@@ -58,14 +58,14 @@ export default function CardHoverGridEffect() {
   return (
     <>
       <div>
-        <div className="container mx-auto">
-          <h2 className="p-2 text-4xl relative">
+        <div className="container mx-auto px-6">
+          <h2 className="px-4 text-4xl relative">
             Nos Services
             <Underline
               fill="#dd62ed"
-              size={230}
+              size={220}
               width="100%"
-              className="absolute top-[55px] left-0"
+              className="absolute top-[45px] left-2"
             />
           </h2>
         </div>

@@ -1,0 +1,4 @@
+.text {
+  font-size: clamp(2.625rem, 14.754vw + -5.748rem, 6rem);
+  line-height: clamp(2.625rem, 14.754vw + -5.748rem, 6rem);
+}

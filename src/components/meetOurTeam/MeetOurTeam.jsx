@@ -12,28 +12,27 @@ import "./meetOurTeam.css";
 export default function MeetOurTeam() {
   return (
     <>
-      <div className=" container mx-auto flex mt-24 gap-24  ">
+      <div className=" container mx-auto grid grid-cols-2 mt-24 gap-24  ">
         <div className="relative">
-          <h2 className="text-4xl basis 1/4 relative ">
+          <h2 className="text-4xl  ">
             Notre équipe
             <Underline
               fill="#dd62ed"
-              size={1450}
+              size={420}
               width="100%"
               className="absolute top-[50px] left-0"
             />
           </h2>
         </div>
 
-        <div className="team basis-3/4 *:space-y-2 p-4">
+        <div className="team  grid grid-cols-1 gap-2 lg:grid-cols-2 xl:grid-cols-3  *:space-y-2 p-4">
           <div className=" ">
-            <div className="azer">
-              <img
-                className="rounded-xl"
-                src={Avatar4}
-                alt="Wade Warren,Fondateur & CEO"
-              />
-            </div>
+            <img
+              className="rounded-xl w-full  "
+              src={Avatar4}
+              alt="Wade Warren,Fondateur & CEO"
+            />
+
             <div>
               <p className="text-lg font-bold">Wade Warren</p>
               <p className="text-primary">Fondateur & CEO</p>

@@ -1,7 +1,6 @@
-import React from "react";
+import { Button } from "@nextui-org/react";
 import { Logo } from "../Logo.jsx";
 import "./footer.css";
-import { Button } from "@nextui-org/react";
 
 function Footer() {
   return (
@@ -90,7 +89,7 @@ function Footer() {
             </div>
             <div>
               <p className="text-sm font-semibold tracking-widest text-gray-200 uppercase">
-                L'entreprise
+                L&apos;entreprise
               </p>
               <ul className="mt-6 space-y-4">
                 <li>
@@ -205,7 +204,7 @@ function Footer() {
                   className="text-lg tracking-wide  text-white font-semibold mt-3 bg-gradient-to-r from-purple-700 to-fuchsia-800"
                   color="primary"
                 >
-                  <span>S'abonner </span>
+                  <span>S&apos;abonner </span>
                   <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
                     <div className="relative h-full w-8 bg-white/20"></div>
                   </div>

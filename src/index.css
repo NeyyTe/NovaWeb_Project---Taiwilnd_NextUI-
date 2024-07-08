@@ -26,7 +26,7 @@
   src: url("./components/fonts/supreme/Supreme-Regular.woff2") format("woff2");
 }
 
-/*Global Reset*/
+/*Global*/
 h1,
 h2 {
   font-family: "Poppins-Medium";

@@ -3,6 +3,7 @@ import Spline from "@splinetool/react-spline";
 import Header from "../header/Header.jsx";
 import RevealAnimation from "../revealAnimation/RevealAnimation.jsx";
 import Spotlight from "../ui/spotlight/Spotlight.jsx";
+import "./HeroSection.css";
 function HeroSection({ children }) {
   return (
     <>
@@ -15,14 +16,14 @@ function HeroSection({ children }) {
           fill="white"
         />
 
-        <section className="  w-full  grid grid-cols-1 2xl:grid-cols-2 w-full mx-auto gap-4 items-center">
+        <section className="  w-full  grid grid-cols-1 2xl:grid-cols-2  gap-4 items-center justify-start">
           <div className=" h-[80vh] hidden 2xl:block">
             <Spline scene="https://prod.spline.design/iv6vLiWEDQbUOuwu/scene.splinecode" />
           </div>
 
-          <div className="  space-y-8 w-8/12 mx-auto my-12 2xl:">
+          <div className="m-auto space-y-8 p-2 w-6/12 my-12 2xl:w-9/12 2xl:mr-auto ">
             <RevealAnimation>
-              <h1 className="text-8xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 animate-fade-down animate-ease-in-out">
+              <h1 className=" text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 animate-fade-down animate-ease-in-out text 2xl:text-left">
                 Où vos idées deviennent une{" "}
                 <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-fuchsia-700 inline-block text-transparent bg-clip-text">
                   réalité
@@ -31,9 +32,9 @@ function HeroSection({ children }) {
             </RevealAnimation>
 
             <RevealAnimation>
-              <p className="font-supremeReg  text-lg tracking-wide text-foreground">
+              <p className="max-w-3xl  font-supremeReg  text-lg tracking-wide text-foreground ">
                 Nous sommes une équipe passionnée de designers et de
-                développeurs web, dédiée à créer{" "}
+                développeurs web, dédiée&shy; à créer{" "}
                 <b className="text-foreground">
                   des sites web uniques et impactants
                 </b>{" "}

@@ -1,10 +1,9 @@
-import React from "react";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { NextUIProvider } from "@nextui-org/react";
-import LandingPage from "./pages/landingPage/LandingPage";
-import ProfilsPage from "./pages/profilsPage/ProfilsPage";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import ErrorPage from "./pages/errorPage/ErrorPage";
+import LandingPage from "./pages/landingPage/LandingPage";
 import ProfilPageSingular from "./pages/profilPageSingular/ProfilPageSingular";
+import ProfilsPage from "./pages/profilsPage/ProfilsPage";
 function App() {
   const navigate = useNavigate();
   return (
