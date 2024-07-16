@@ -30,7 +30,7 @@ function PouquoiNousSection() {
                   nous sommes des créateurs passionnés, des innovateurs
                   audacieux et des partenaires dévoués. Notre mission est simple
                   :
-                  <strong className="text-white">
+                  <strong className="text-primary-foreground">
                     {" "}
                     transformer vos idées en réalité
                   </strong>
@@ -38,23 +38,33 @@ function PouquoiNousSection() {
                 </p>
                 <p>
                   Notre équipe hautement qualifiée combine{" "}
-                  <strong className="text-white">expertise technique</strong> et{" "}
-                  <strong className="text-white">créativité</strong> pour
-                  façonner des expériences uniques qui inspirent, captivent et
-                  engagent.
+                  <strong className="text-primary-foreground">
+                    expertise technique
+                  </strong>{" "}
+                  et{" "}
+                  <strong className="text-primary-foreground">
+                    créativité
+                  </strong>{" "}
+                  pour façonner des expériences uniques qui inspirent, captivent
+                  et engagent.
                 </p>{" "}
                 <p>
                   Que vous soyez une start-up ambitieuse ou une grande
                   entreprise établie, nous sommes là pour vous accompagner à
                   chaque étape de votre parcours vers{" "}
-                  <strong className="text-white">votre succès</strong>.
+                  <strong className="text-primary-foreground">
+                    votre succès
+                  </strong>
+                  .
                 </p>
                 <p>
                   {" "}
                   Découvrez comment nous pouvons donner vie à{" "}
-                  <strong className="text-white">votre vision</strong> et vous
-                  aider à{" "}
-                  <strong className="text-white">
+                  <strong className="text-primary-foreground">
+                    votre vision
+                  </strong>{" "}
+                  et vous aider à{" "}
+                  <strong className="text-primary-foreground">
                     atteindre de nouveaux sommets
                   </strong>
                   .
@@ -62,7 +72,7 @@ function PouquoiNousSection() {
               </div>
             </div>
 
-            <div className="w-full grid grid-cols-2 gap-2 justify-items-center lg:grid-cols-4 lg:divide-x lg:*:px-20 2xl:divide-x   mt-8">
+            <div className="w-full grid grid-cols-2 gap-2 justify-items-center lg:grid-cols-4 lg:divide-x lg:*:px-12 xl:*:px-16 2xl:*:px-24 2xl:divide-x *:min-w-max text-center mt-8">
               <div className="">
                 <p className=" text-5xl 2xl:text-7xl font-bold bg-gradient-to-br from-fuchsia-100 via-fuchsia-600 to-sky-800 inline-block text-transparent bg-clip-text whitespace-pre-wrap">
                   <NumberTicker

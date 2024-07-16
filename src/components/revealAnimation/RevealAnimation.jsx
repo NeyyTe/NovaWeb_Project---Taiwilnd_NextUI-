@@ -5,7 +5,7 @@ function RevealAnimation({ children }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
   const mainControls = useAnimation();
-  const slideControls = useAnimation();
+  // const slideControls = useAnimation();
   useEffect(() => {
     if (isInView) {
       mainControls.start("visible");
