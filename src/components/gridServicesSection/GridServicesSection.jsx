@@ -70,7 +70,7 @@ export default function CardHoverGridEffect() {
           </h2>
         </div>
 
-        <div className="mt-4 p-4">
+        <div className="mt-4 p-6">
           <HoverEffect items={projects} />
         </div>
       </div>

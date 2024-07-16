@@ -16,12 +16,12 @@ function HeroSection({ children }) {
           fill="white"
         />
 
-        <section className="  w-full  grid grid-cols-1 2xl:grid-cols-2  gap-4 items-center justify-start">
+        <section className="  w-full  grid grid-cols-1 2xl:grid-cols-2  gap-4 items-center ">
           <div className=" h-[80vh] hidden 2xl:block">
             <Spline scene="https://prod.spline.design/iv6vLiWEDQbUOuwu/scene.splinecode" />
           </div>
 
-          <div className="m-auto space-y-8 p-2 w-6/12 my-12 2xl:w-9/12 2xl:mr-auto ">
+          <div className=" space-y-8 p-2 w-6/12 my-12 2xl:w-9/12 2xl:mr-auto ">
             <RevealAnimation>
               <h1 className=" text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 animate-fade-down animate-ease-in-out text 2xl:text-left">
                 Où vos idées deviennent une{" "}
