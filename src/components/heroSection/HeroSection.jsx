@@ -16,14 +16,14 @@ function HeroSection({ children }) {
           fill="white"
         />
 
-        <section className="  w-full  grid grid-cols-1 2xl:grid-cols-2 2xl:justify-items-start gap-4 items-center ">
+        <section className="  w-full  grid grid-cols-1 2xl:grid-cols-2  gap-4  ">
           <div className=" h-[80vh] hidden 2xl:block">
             <Spline scene="https://prod.spline.design/iv6vLiWEDQbUOuwu/scene.splinecode" />
           </div>
 
-          <div className=" space-y-8 p-2 w-10/12 my-12 2xl:w-9/12 mx-auto  2xl:mx-0">
+          <div className=" space-y-8 p-8 max-w-3xl my-6 md:my-12 2xl:w-10/12 mx-auto  2xl:mx-0 text-center 2xl:text-left">
             <RevealAnimation>
-              <h1 className=" text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 animate-fade-down animate-ease-in-out text 2xl:text-left">
+              <h1 className=" text-center text-6xl md:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 animate-fade-down animate-ease-in-out text 2xl:text-left ">
                 Où vos idées deviennent une{" "}
                 <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-fuchsia-700 inline-block text-transparent bg-clip-text">
                   réalité
@@ -52,7 +52,7 @@ function HeroSection({ children }) {
             </RevealAnimation>
 
             <RevealAnimation>
-              <div className="flex items-center">
+              <div className="flex items-center justify-center 2xl:justify-start">
                 <AvatarGroup
                   className="justify-start "
                   max={4}

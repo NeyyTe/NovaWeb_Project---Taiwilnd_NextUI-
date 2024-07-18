@@ -70,12 +70,12 @@ export default function CardHoverGridEffect() {
           </h2>
         </div>
 
-        <div className="mt-4 p-6">
+        <div className="mt-4 ">
           <HoverEffect items={projects} />
         </div>
       </div>
 
-      <hr className=" max-w-3xl mx-auto bg-gradient-to-r from-purple-500/10 via-fuchsia-500 to-violet-800/10 h-1 border-none rounded my-8" />
+      <hr className=" w-6/12 mx-auto bg-gradient-to-r from-purple-500/10 via-fuchsia-500 to-violet-800/10 h-1 border-none rounded my-6" />
     </>
   );
 }

@@ -11,11 +11,11 @@ function TestimonialsSection({ children }) {
           <img
             src={oooscillate}
             className=" absolute inset-0 testiimg w-full  -z-10 "
-            alt=""
+            alt="Image réunion pro"
           />
-          <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2  space-x-12  ">
+          <div className=" mx-auto grid grid-cols-1 gap-x-8 lg:grid-cols-2 px-10 justify-items-center">
             <div>
-              <img src={teamWorking} className="rounded" alt="teamworking" />
+              <img src={teamWorking} className=" py-6" alt="teamworking" />
             </div>
 
             <div className="">
@@ -23,13 +23,13 @@ function TestimonialsSection({ children }) {
                 Témoignages
                 <Underline
                   fill="#dd62ed"
-                  size={530}
+                  size={430}
                   width="100%"
                   className="absolute top-[50px] left-0"
                 />
               </h2>
 
-              <div className="space-y-6 mt-[72px] *:leading-tight ">
+              <div className="space-y-6 mt-[62px] *:leading-tight ">
                 <p className="text-3xl">
                   " NovaWeb a transformé notre présence en ligne. Leur équipe
                   talentueuse a su capturer notre vision et la traduire en un
