@@ -7,18 +7,18 @@ function TestimonialsSection({ children }) {
   return (
     <>
       <RevealAnimation>
-        <div className="testidiv relative z-10">
+        <div className="testidiv relative z-10 px-10">
           <img
             src={oooscillate}
             className=" absolute inset-0 testiimg w-full  -z-10 "
             alt="Image réunion pro"
           />
-          <div className=" mx-auto grid grid-cols-1 gap-x-8 lg:grid-cols-2 px-10 justify-items-center">
+          <div className=" container mx-auto grid grid-cols-1 gap-x-8 lg:grid-cols-2 justify-items-center mt-8">
             <div>
               <img src={teamWorking} className=" py-6" alt="teamworking" />
             </div>
 
-            <div className="">
+            <div className="mt-4 container ">
               <h2 className="text-4xl relative">
                 Témoignages
                 <Underline
@@ -29,7 +29,7 @@ function TestimonialsSection({ children }) {
                 />
               </h2>
 
-              <div className="space-y-6 mt-[62px] *:leading-tight ">
+              <div className="space-y-6 mt-[40px] *:leading-tight ">
                 <p className="text-3xl">
                   " NovaWeb a transformé notre présence en ligne. Leur équipe
                   talentueuse a su capturer notre vision et la traduire en un
@@ -40,7 +40,7 @@ function TestimonialsSection({ children }) {
                   Un grand merci à toute l'équipe pour leur professionnalisme et
                   leur dévouement !{" "}
                 </p>
-                <div className="pt-8 ">
+                <div className="pt-4">
                   <p className="text-xl"> Sophie</p>
                   <p className="text-[#efedfd99]">CEO de XYZ Company</p>
                 </div>

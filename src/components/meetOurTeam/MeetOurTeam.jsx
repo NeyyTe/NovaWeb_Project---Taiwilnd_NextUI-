@@ -12,84 +12,84 @@ import "./meetOurTeam.css";
 export default function MeetOurTeam() {
   return (
     <>
-      <div className=" container mx-auto grid grid-cols-2 mt-24 gap-24  ">
+      <div className="  grid grid-cols-1 mt-12  justify-items-center ">
         <div className="relative">
           <h2 className="text-4xl  ">
             Notre équipe
             <Underline
               fill="#dd62ed"
-              size={420}
+              size={1420}
               width="100%"
               className="absolute top-[50px] left-0"
             />
           </h2>
         </div>
 
-        <div className="team  grid grid-cols-1 gap-2 lg:grid-cols-2 xl:grid-cols-3  *:space-y-2 p-4">
+        <div className="team mx-auto max-w-5xl mt-12 grid grid-cols-1 gap-y-6 gap-2 sm:grid-cols-2 xl:grid-cols-3 ">
           <div className=" ">
             <img
-              className="rounded-xl w-full  "
+              className=" w-[350px] rounded-xl   "
               src={Avatar4}
               alt="Wade Warren,Fondateur & CEO"
             />
 
-            <div>
+            <div className="pt-2">
               <p className="text-lg font-bold">Wade Warren</p>
               <p className="text-primary">Fondateur & CEO</p>
             </div>
           </div>
           <div className=" ">
             <img
-              className="rounded-xl"
+              className="w-[350px] rounded-xl"
               src={Avatar3}
               alt="Floyd Miles,Lead Développeur Web"
             />
-            <div>
+            <div className="pt-2">
               <p className="text-lg font-bold">Floyd Miles</p>
               <p className="text-primary">Lead Développeur Web</p>
             </div>
           </div>{" "}
           <div className=" ">
             <img
-              className="rounded-xl"
+              className=" w-[350px] rounded-xl"
               src={Avatar2}
               alt="Jane Cooper,Marketing Manager"
             />
-            <div>
+            <div className="pt-2">
               <p className="text-lg font-bold">Jane Cooper</p>
               <p className="text-primary">Marketing Manager</p>
             </div>
           </div>{" "}
           <div className=" ">
             <img
-              className="rounded-xl"
+              className="w-[350px] rounded-xl"
               src={Avatar1}
               alt="Alex Johnson,Senior UI Designer"
             />
-            <div>
+            <div className="pt-2">
               <p className="text-lg font-bold">Alex Johnson</p>
               <p className="text-primary">Senior UI Designer</p>
             </div>
           </div>{" "}
           <div className=" ">
             <img
-              className="rounded-xl"
+              className="w-[350px] rounded-xl"
               src={Avatar5}
               alt="Devon Lane,Senior Graphic Designer"
             />
-            <div>
+            <div className="pt-2">
               <p className="text-lg font-bold">Devon Lane</p>
               <p className="text-primary">Senior Designer Graphique</p>
             </div>
           </div>
           <div className=" ">
             <img
-              className="rounded-xl"
+              className="w-[350px] rounded-xl"
               src={Avatar6}
               alt="Cameron Williamson,Spécialiste Marketing Numérique"
             />
 
-            <div>
+            <div className="pt-2">
               <p className="text-lg font-bold">Cameron Williamson</p>
               <p className="text-primary">Spécialiste Marketing Numérique</p>
             </div>
