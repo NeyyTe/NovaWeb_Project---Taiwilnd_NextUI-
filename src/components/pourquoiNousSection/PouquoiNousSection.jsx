@@ -9,9 +9,9 @@ function PouquoiNousSection() {
   return (
     <>
       <RevealAnimation>
-        <div className="  relative  p-8 z-[1]">
+        <section className="  relative  p-8 z-[1]">
           <div className=" container mx-auto rounded  bg-gray-800/50 p-8 ">
-            <div className="flex flex-col p-4">
+            <div className="flex flex-col">
               <div className="">
                 <h2 className="text-3xl font-bold   relative ">
                   Pourquoi nous choisir
@@ -24,7 +24,7 @@ function PouquoiNousSection() {
                 </h2>
               </div>
 
-              <div className="text-xl basis-3/4 space-y-4 *:tracking-wide px-6 mt-16 text-gray-300">
+              <div className="text-xl basis-3/4 space-y-4 *:tracking-wide mt-16 text-gray-300">
                 <p>
                   Chez NovaWeb, nous sommes des créateurs passionnés, des
                   innovateurs audacieux et des partenaires dévoués. Notre
@@ -71,7 +71,7 @@ function PouquoiNousSection() {
               </div>
             </div>
 
-            <div className="w-full grid grid-cols-2 gap-y-8 justify-items-center lg:grid-cols-4 lg:divide-x lg:*:px-12 xl:*:px-16 2xl:*:px-24 2xl:divide-x *:min-w-max text-center mt-8">
+            <div className="w-full grid grid-cols-1 gap-y-8 justify-items-center sm:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:*:px-12 xl:*:px-16 2xl:*:px-24 2xl:divide-x *:min-w-max text-center mt-8">
               <div className="">
                 <p className=" text-5xl 2xl:text-7xl font-bold bg-gradient-to-br from-fuchsia-100 via-fuchsia-600 to-sky-800 inline-block text-transparent bg-clip-text whitespace-pre-wrap">
                   <NumberTicker
@@ -113,7 +113,7 @@ function PouquoiNousSection() {
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <div className="h-[28rem] p-4 hidden xl:block">
           <Spline scene="https://prod.spline.design/nUfdKrDAVw9MfrsJ/scene.splinecode" />
         </div>

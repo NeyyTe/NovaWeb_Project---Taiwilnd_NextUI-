@@ -3,7 +3,7 @@ import { Button } from "@nextui-org/react";
 function ContactSection() {
   return (
     <>
-      <div className="container mx-auto bg-gradient-to-br from-sky-800 via-fuchsia-600 to-fuchsia-300 rounded-lg md:rounded-full mt-16 ">
+      <div className="container w-11/12 mx-auto bg-gradient-to-br from-sky-800 via-fuchsia-600 to-fuchsia-300 rounded-lg md:rounded-full mt-16 ">
         <div className="grid grid-cols-1 place-items-center p-8 *:space-y-8 text-center ">
           <div className=" ">
             <h1 className="text-4xl font-bold text-center">

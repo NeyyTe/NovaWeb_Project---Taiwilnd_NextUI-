@@ -5,8 +5,8 @@ import "./footer.css";
 function Footer() {
   return (
     <>
-      <section className="py-10  mt-12 footerBorder  sm:pt-16 lg:pt-24">
-        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl ">
+      <section className="py-10  mt-12 footerBorder sm:pt-16 lg:pt-24">
+        <div className="px-8 mx-auto max-w-7xl ">
           <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
             <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
               <Logo />
@@ -181,11 +181,11 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
+            <div className="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8 ">
               <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
                 Abonné vous à la newsletter
               </p>
-              <form action="#" method="POST" className="mt-6">
+              <form action="#" method="POST" className="">
                 <div>
                   <label htmlFor="email" className="sr-only">
                     Email
@@ -195,7 +195,7 @@ function Footer() {
                     name="email"
                     id="email"
                     placeholder="Entrer votre email"
-                    className="block w-full p-2 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:outline-primary caret-blue-600 "
+                    className="block w-full p-2 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:outline-primary caret-blue-600 mt-3"
                   />
                 </div>
 
@@ -213,11 +213,13 @@ function Footer() {
             </div>
           </div>
           <hr className="mt-16 mb-10 border-gray-600" />
-          <p className="text-sm text-center text-gray-300">
+          <p className="text-sm text-center text-gray-400">
             © Copyright 2024, Tout droits réservé
           </p>
 
-          <p className="text-sm text-center text-gray-300">Maréchal Maxence</p>
+          <p className="text-sm text-center text-gray-400">
+            Made by Maréchal Maxence
+          </p>
         </div>
       </section>
     </>

@@ -21,9 +21,9 @@ function HeroSection({ children }) {
             <Spline scene="https://prod.spline.design/iv6vLiWEDQbUOuwu/scene.splinecode" />
           </div>
 
-          <div className=" space-y-8 p-8 max-w-3xl my-6 md:my-12 2xl:w-10/12 mx-auto  2xl:mx-0 text-center 2xl:text-left">
+          <div className=" w-full space-y-8  max-w-3xl my-6 md:my-12 2xl:w-10/12 mx-auto  2xl:mx-0 p-8 ">
             <RevealAnimation>
-              <h1 className=" text-center text-6xl md:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 animate-fade-down animate-ease-in-out text 2xl:text-left ">
+              <h1 className=" text-center  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 animate-fade-down animate-ease-in-out text 2xl:text-left ">
                 Où vos idées deviennent une{" "}
                 <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-fuchsia-700 inline-block text-transparent bg-clip-text">
                   réalité
@@ -43,16 +43,18 @@ function HeroSection({ children }) {
             </RevealAnimation>
 
             <RevealAnimation>
-              <Button className="text-lg tracking-wide bg-gradient-to-r from-purple-700 to-fuchsia-800 group  ">
-                <b className="">Acheter </b>
-                <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
-                  <div className="relative h-full w-8 bg-white/20"></div>
-                </div>
-              </Button>
+              <div className="text-center 2xl:text-left">
+                <Button className="text-lg tracking-wide bg-gradient-to-r from-purple-700 to-fuchsia-800 group  ">
+                  <b className="">Acheter </b>
+                  <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
+                    <div className="relative h-full w-8 bg-white/20"></div>
+                  </div>
+                </Button>
+              </div>
             </RevealAnimation>
 
             <RevealAnimation>
-              <div className="flex items-center justify-center 2xl:justify-start">
+              <div className="flex flex-col md:flex-row gap-y-4 items-center justify-center 2xl:justify-start">
                 <AvatarGroup
                   className="justify-start "
                   max={4}
@@ -76,7 +78,7 @@ function HeroSection({ children }) {
                     src="https://i.pravatar.cc/150?u=a04258114e29026302d"
                   />
                 </AvatarGroup>
-                <ul className="ml-12 list-disc">
+                <ul className="md:ml-12 list-disc">
                   <li>Plus de 450 clients satisfaits</li>
                 </ul>
               </div>
