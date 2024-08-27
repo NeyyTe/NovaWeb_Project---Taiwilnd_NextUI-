@@ -32,9 +32,9 @@ function HeroSection({ children }) {
             </RevealAnimation>
 
             <RevealAnimation>
-              <p className="  font-supremeReg  text-lg tracking-wide text-foreground ">
+              <p className="  font-supremeReg text-lg tracking-wide text-foreground ">
                 Nous sommes une équipe passionnée de designers et de
-                développeurs web, dédiée&shy; à créer{" "}
+                développeurs web, dédiée à créer{" "}
                 <b className="text-primary-foreground">
                   des sites web uniques et impactants
                 </b>{" "}

@@ -1,21 +1,22 @@
-import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
-import { Divider } from "@nextui-org/divider";
-import { Avatar, AvatarGroup, AvatarIcon } from "@nextui-org/avatar";
+// import { Avatar } from "@nextui-org/avatar";
+// import { Divider } from "@nextui-org/divider";
+// import { NavLink, Outlet } from "react-router-dom";
+
+import { SidebarDemo } from "@/components/sidebar/Sidebar";
 
 function ProfilsPage() {
-  const profiles = [
-    "Paramètres",
-    "Services historique",
-    "Analyses",
-    "Systeme",
-    "Configurations",
-  ];
+  // const profiles = [
+  //   "Paramètres",
+  //   "Services historique",
+  //   "Analyses",
+  //   "Systeme",
+  //   "Configurations",
+  // ];
 
   return (
     <>
-      <div className="flex  ">
-        <div className=" flex flex-col  bg-primary-50/70  *:text-xl w-1/5  p-8 py-12">
+      <div className="flex">
+        {/* <div className=" flex flex-col bg-primary-50/70  *:text-xl w-1/5 p-8 py-12">
           <div className="flex gap-8">
             <Avatar
               color="danger"
@@ -46,11 +47,11 @@ function ProfilsPage() {
           </div>
           <div className=" flex items-end">
             {" "}
-            <NavLink to="/">Retour à l'accueil</NavLink>
+            <NavLink to="/">Retour à l&apos;accueil</NavLink>
           </div>
-        </div>
-
-        <Outlet />
+        </div> */}
+        <SidebarDemo />
+        {/* <Outlet /> */}
       </div>
     </>
   );
